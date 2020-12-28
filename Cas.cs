@@ -15,6 +15,7 @@ namespace Suivi_malade_corona
         private int Cas_Actifs;
         private int Cas_Grave;
         private int Cas_Exclus;
+        
 
         public int cas_décès{
         get=>Cas_Décès;

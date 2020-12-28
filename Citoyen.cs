@@ -16,7 +16,6 @@ namespace Suivi_malade_corona
         private string Adresse;
         private string Sexe;
         private Cahier_Medicale Cahier_Medicale;
-        private Historique_Citoyen Historique_Citoyen;
         private string Test_Result;
         private string Etat_Clr;
         public string nom{
@@ -47,10 +46,7 @@ namespace Suivi_malade_corona
         get=>Cahier_Medicale;
             set=>Cahier_Medicale=value;
         }
-        public Historique_Citoyen historique_citoyen{
-        get=>Historique_Citoyen;
-            set =>Historique_Citoyen=value;
-        }
+       
         public string test_result{
         get=>Test_Result;
             set=>Test_Result=value;
@@ -59,10 +55,11 @@ namespace Suivi_malade_corona
         get=>Etat_Clr;
             set=>Etat_Clr=value;
         }
+        //
         public Citoyen(){
             this.Etat_Clr="orange";
         }
-        public Citoyen( string Nom, string Prenom, int Num_Telephone,string Num_Identite, string Adresse, string Sexe, Cahier_Medicale Cahier_Medicale,  Historique_Citoyen Historique_Citoyen, string Etat_Clr)
+        public Citoyen( string Nom, string Prenom, int Num_Telephone,string Num_Identite, string Adresse, string Sexe, Cahier_Medicale Cahier_Medicale, string Etat_Clr)
         {
             this.nom=Nom;
             this.prenom=Prenom;
@@ -70,7 +67,6 @@ namespace Suivi_malade_corona
             this.num_identite=Num_Identite;
             this.adresse=Adresse;
             this.cahier_medicale=Cahier_Medicale;
-            this.historique_citoyen=Historique_Citoyen;
             this.etat_clr=Etat_Clr;
         }
     }

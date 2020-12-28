@@ -12,7 +12,13 @@ namespace Suivi_malade_corona
         private string Nom;
         private int Nbrs_Chambres;
         private int Nbrs_Lits_Reanimation; 
-         
+        private int Nbrs_Chambres_Occupees;
+        
+        public int nbrs_chambres_occupees{
+        get=>Nbrs_Chambres_Occupees;
+            set=>Nbrs_Chambres_Occupees=value;
+        }
+        
         public int nbrs_chambres{
         get =>Nbrs_Chambres;
         set =>Nbrs_Chambres=value;
