@@ -63,9 +63,10 @@ namespace Suivi_malade_corona
         }
         public void Diagnostique(Citoyen c)
         {
-
+            if(c.test_result=="positif") // si le citoyen est positif on lui fait le diagno
+            {
+            
+            }
         }
     }
-       
-    
 }

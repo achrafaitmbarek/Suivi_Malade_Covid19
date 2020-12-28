@@ -19,6 +19,9 @@ namespace Suivi_malade_corona
         private string Test_Result;
         private string Etat_Clr;
         private string Vaccine;
+        private bool Ajout=false;
+        private string Etat;// mort ou vif ou etat grave ou gueri
+        //accesseurs
         public string vaccine{
         get=>Vaccine;
             set=>Vaccine=value;
@@ -51,16 +54,26 @@ namespace Suivi_malade_corona
         get=>Cahier_Medicale;
             set=>Cahier_Medicale=value;
         }
-       
         public string test_result{
         get=>Test_Result;
-            set=>Test_Result=value;
+            set
+            {
+                if (test_result=="positif"&&test_result=="negatif")
+	            {
+                    Test_Result=value; 
+	            }
+                
+            }
         }
         public string etat_clr{
         get=>Etat_Clr;
             set=>Etat_Clr=value;
         }
-        //
+        public bool ajout{
+        get=>Ajout;
+            set=>Ajout=value;
+        }
+        ////constructeur
         public Citoyen(){
             this.Etat_Clr="orange";
             this.Vaccine="non vaccine";

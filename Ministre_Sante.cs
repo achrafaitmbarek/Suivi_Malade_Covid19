@@ -14,8 +14,8 @@ namespace Suivi_malade_corona
         get=>Cas;
             set=>Cas=value;
         }
-        public void change_cas(){
-        
+        public void change_cas(Citoyen c){
+        if(c.ajout)
         }
         
          public void  recoit_donnee()
