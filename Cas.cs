@@ -18,7 +18,7 @@ namespace Suivi_malade_corona
 
         public int cas_décès{
         get=>Cas_Décès;
-            set=>Cas_Décès=value;
+            set=>Cas_Décès=value; 
         }
 
         public int cas_confirmés{
