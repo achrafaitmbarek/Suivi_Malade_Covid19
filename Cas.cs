@@ -15,7 +15,15 @@ namespace Suivi_malade_corona
         private int Cas_Actifs;
         private int Cas_Grave;
         private int Cas_Exclus;
-        
+
+        public Cas(){
+        this.Cas_Actifs=0;
+            this.Cas_Grave=0;
+            this.Cas_Confirmés=0;
+            this.Cas_Guérisons=0;
+            this.Cas_Décès=0;
+            this.Cas_Exclus=0;
+        }
 
         public int cas_décès{
         get=>Cas_Décès;
@@ -42,5 +50,6 @@ namespace Suivi_malade_corona
         get=>Cas_Exclus;
             set=>Cas_Exclus=value;
         }
+        
     }
 }

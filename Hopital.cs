@@ -48,7 +48,22 @@ namespace Suivi_malade_corona
                 C.test_result="negatif";
             }
         }
-        public void Diagnostique(Citoyen c){
+        public void Faire_Vacccin(Citoyen c){
+            string vaccin_rep=console.asking("vous avez vacciner ce citoyen? (SVP reponds pra oui ou non)");
+            if (vaccin_rep=="oui")
+	        {
+                c.vaccine="vaccine";
+                c.etat_clr="vert";
+	        }
+            else
+            {
+                c.vaccine="non vaccine";
+                c.etat_clr="orange";
+            }
+        }
+        public void Diagnostique(Citoyen c)
+        {
+
         }
     }
        

@@ -11,16 +11,22 @@ namespace Suivi_malade_corona
     {
         
         private string Nom;
+        public string nom{
+        get=>Nom;
+            set=>Nom=value;
+        }
         public void test_pcr(Citoyen C){
 
             string test=console.asking("le test est positif ou negatif?");
             if (test=="positif")
 	        {
                 C.etat_clr="rouge";
+                C.test_result="positif";
 	        }
             else
             {
                 C.etat_clr="vert";
+                C.test_result="positif";
             }
          }
     }

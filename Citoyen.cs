@@ -18,6 +18,11 @@ namespace Suivi_malade_corona
         private Cahier_Medicale Cahier_Medicale;
         private string Test_Result;
         private string Etat_Clr;
+        private string Vaccine;
+        public string vaccine{
+        get=>Vaccine;
+            set=>Vaccine=value;
+        }
         public string nom{
         get=>Nom;
             set=>Nom=value;
@@ -58,6 +63,7 @@ namespace Suivi_malade_corona
         //
         public Citoyen(){
             this.Etat_Clr="orange";
+            this.Vaccine="non vaccine";
         }
         public Citoyen( string Nom, string Prenom, int Num_Telephone,string Num_Identite, string Adresse, string Sexe, Cahier_Medicale Cahier_Medicale, string Etat_Clr)
         {
