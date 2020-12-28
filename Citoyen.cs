@@ -58,7 +58,7 @@ namespace Suivi_malade_corona
         get=>Test_Result;
             set
             {
-                if (test_result=="positif"&&test_result=="negatif")
+                if (test_result=="positif"||test_result=="negatif")
 	            {
                     Test_Result=value; 
 	            }
