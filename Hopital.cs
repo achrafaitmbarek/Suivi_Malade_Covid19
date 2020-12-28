@@ -35,7 +35,7 @@ namespace Suivi_malade_corona
             if (test=="positif")
 	        {
                 C.etat_clr="rouge";
-                C.test_result="positif"
+                C.test_result="positif";
 	        }
             else{
                 C.etat_clr="vert";

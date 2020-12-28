@@ -9,6 +9,6 @@ namespace Suivi_malade_corona
 {
     class Historique_Citoyen
     {
-     
+     private string Ville_visite[]=new string[10];
     }
 }

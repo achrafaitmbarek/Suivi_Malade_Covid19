@@ -48,7 +48,7 @@
     <Compile Include="Citoyen.cs" />
     <Compile Include="Historique_Citoyen.cs" />
     <Compile Include="Hopital.cs" />
-    <Compile Include="Laboratoire.cs" />
+    <Compile Include="Laboratoire_Mobile.cs" />
     <Compile Include="Ministre_Sante.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

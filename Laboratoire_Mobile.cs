@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Suivi_malade_corona
 {
-    class Laboratoire
+    class Laboratoire_Mobile
     {
         private string Nom;
         public void test_pcr(Citoyen C){

@@ -9,6 +9,6 @@ namespace Suivi_malade_corona
 {
     class Ministre_Sante
     {
-        private Cas cas;   
+         
     }
 }
