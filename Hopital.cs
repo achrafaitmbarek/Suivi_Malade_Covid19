@@ -14,6 +14,7 @@ namespace Suivi_malade_corona
         private int Nbrs_Lits_Reanimation; 
         private int Nbrs_Chambres_Occupees;
         private Ministre_Sante Ministre;
+       
 
         public Ministre_Sante ministre {
         get=>Ministre;
@@ -48,7 +49,7 @@ namespace Suivi_malade_corona
 	        {
                 C.etat_clr="rouge";
                 C.test_result="positif";
-                this.Ministre.cas.cas_actifs++;
+                this.Ministre.cas.cas_actifs=;
 	        }
             else{
                 C.etat_clr="vert";
@@ -114,11 +115,11 @@ namespace Suivi_malade_corona
 	            {
                   result_diagnos="grave";
 	            }
-                else if(SPO2=="non-sature")
+                else if(SPO2(c)=="non-sature")
                 {
                     result_diagnos="grave";
                 }
-                else if(ECG=="grave")
+                else if(ECG(c)=="grave")
                 {
                     result_diagnos="grave";
                 }

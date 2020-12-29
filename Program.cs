@@ -17,6 +17,7 @@ namespace Suivi_malade_corona
             
             //Citoyen citoyen =new Citoyen("Ait MBAREK","ACHRAF",0697294140,"VA1111","Midelt");
             var Citoyens =new List<Citoyen>();
+            Hopital hopital=new Hopital();
             bool A=true;
             while (A)
 	       {
@@ -26,7 +27,8 @@ namespace Suivi_malade_corona
                 NvCitoyen.num_telephone=int.Parse(console.asking("entrer le telephone du citoyen"));
                 NvCitoyen.num_identite=console.asking("entrer le numero identite du citoyen");
                 NvCitoyen.adresse=console.asking("entrer l'adresse du citoyen");
-                NvCitoyen.etat_clr=console.asking("entrer etat du citoyen(rouge/verte/orange)");
+               // NvCitoyen.etat_clr=console.asking("entrer etat du citoyen(rouge/verte/orange)");// juste pour teste la fonctionalite des attributs 
+                hopital.Test_Pcr(NvCitoyen);
                 Citoyens.Add(NvCitoyen);
                 if(console.asking("ajoute un autre citoyen?(y/n)")=="n")
                     A=false;
@@ -39,7 +41,9 @@ namespace Suivi_malade_corona
                 Console.WriteLine(c.num_identite);
                 Console.WriteLine(c.adresse);
                 Console.WriteLine(c.sexe);
+                Console.WriteLine(c.test_result);
                 Console.WriteLine(c.etat_clr);
+
 	        }
             Console.ReadLine();
 	       }
