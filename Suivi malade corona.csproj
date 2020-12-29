@@ -46,7 +46,6 @@
     <Compile Include="Cahier_Medicale.cs" />
     <Compile Include="Cas.cs" />
     <Compile Include="Citoyen.cs" />
-	  <Compile Include="Diagnostique.cs" />
     <Compile Include="Hopital.cs" />
 	  <Compile Include="Laboratoire.cs" />
     <Compile Include="Ministre_Sante.cs" />

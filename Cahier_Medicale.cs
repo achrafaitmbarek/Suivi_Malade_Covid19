@@ -7,13 +7,13 @@ using System.Data.SqlClient;
 
 namespace Suivi_malade_corona
 {
-    class Cahier_Medicale
+   public class Cahier_Medicale
     {
         private int Num_Cahier;
         private string Nom_Docteur;
         private string Situation_Familiale;
         private bool Allergie=false;
-        private string Date_Prise_En_Charge;
+        private DateTime Date_Prise_En_Charge;
         private bool Maladie_Chronique=false;
         //accessors
         public int num_cahier{
@@ -36,7 +36,7 @@ namespace Suivi_malade_corona
         set=> Allergie=value;
         }
         
-        public string date_prise_en_charge{
+        public DateTime date_prise_en_charge{
         get=>Date_Prise_En_Charge;
         set=> Date_Prise_En_Charge=value;
         }
@@ -51,10 +51,9 @@ namespace Suivi_malade_corona
         this.Nom_Docteur=string.Empty;
         this.Situation_Familiale=string.Empty;
         this.Allergie=false;
-        this.Date_Prise_En_Charge=string.Empty;
         this.Maladie_Chronique=false;
         }
-        public Cahier_Medicale(int Num_Cahier,string Nom_Docteur, string Situation_Familiale ,bool Allergie ,string Date_Prise_En_Charge ,bool Maladie_Chronique){
+        public Cahier_Medicale(int Num_Cahier,string Nom_Docteur, string Situation_Familiale ,bool Allergie ,DateTime Date_Prise_En_Charge ,bool Maladie_Chronique){
             this.num_cahier=Num_Cahier;
             this.nom_docteur=Nom_Docteur;
             this.situation_familiale=Situation_Familiale;

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Suivi_malade_corona
 {
-    class Citoyen
+    public class Citoyen
     {
         private string Nom;
         private string Prenom;
@@ -22,6 +22,10 @@ namespace Suivi_malade_corona
         private bool Ajout=false;
         private string Etat;// mort ou vif ou etat grave ou gueri
         //accesseurs
+        public string etat{
+        get=>Etat;
+            set=>Etat=value;
+        }
         public string vaccine{
         get=>Vaccine;
             set=>Vaccine=value;

@@ -7,12 +7,18 @@ using System.Data.SqlClient;
 
 namespace Suivi_malade_corona
 {
-    class Hopital
+    public class Hopital
     {
         private string Nom;
         private int Nbrs_Chambres;
         private int Nbrs_Lits_Reanimation; 
         private int Nbrs_Chambres_Occupees;
+        private Ministre_Sante Ministre;
+
+        public Ministre_Sante ministre {
+        get=>Ministre;
+            set=>Ministre=value;
+        }
         
         public int nbrs_chambres_occupees{
         get=>Nbrs_Chambres_Occupees;
@@ -42,10 +48,12 @@ namespace Suivi_malade_corona
 	        {
                 C.etat_clr="rouge";
                 C.test_result="positif";
+                this.Ministre.cas.cas_actifs++;
 	        }
             else{
                 C.etat_clr="vert";
                 C.test_result="negatif";
+                this.Ministre.cas.cas_exclus++;
             }
         }
         public void Faire_Vacccin(Citoyen c){
@@ -60,6 +68,67 @@ namespace Suivi_malade_corona
                 c.vaccine="non vaccine";
                 c.etat_clr="orange";
             }
+        }
+        public string ECG(Citoyen c)//Electro_Cardio_Gram
+        {
+            
+            string result =console.asking("le resultat d'ECG est normale ou grave ");
+            
+            while(result!="grave"||result!="normale")
+            {
+                result=console.asking("saisie non-valide! svp noramle ou grave");
+            }
+            return result;
+        }
+        public string SPO2(Citoyen c)//La saturation pulsée en oxygène
+        {
+            string result =console.asking("oxygen est sature ou non-sature ?");
+            while(result!="sature"||result!="non-sature")
+            {
+                result=console.asking("saisie non-valide! svp sature ou non-sature");
+            }
+            return result;
+        }
+
+        public string Consultation_cahier(Citoyen c)
+        {
+            string result=string.Empty;
+                if (c.cahier_medicale.allergie == true || c.cahier_medicale.maladie_chronique == true)
+                {
+                    result="grave";
+                }
+                else if(c.cahier_medicale.allergie != true || c.cahier_medicale.maladie_chronique != true)
+                {
+                      result="normal";
+                }
+            return result;
+        }
+
+        public string Diagnostique(Citoyen c)
+        {
+            string result_diagnos=string.Empty;
+
+            if (c.test_result == "positif") // si le citoyen est positif on lui fait le diagno
+            {
+                if (Consultation_cahier(c)=="grave")
+	            {
+                  result_diagnos="grave";
+	            }
+                else if(SPO2=="non-sature")
+                {
+                    result_diagnos="grave";
+                }
+                else if(ECG=="grave")
+                {
+                    result_diagnos="grave";
+                }
+                else
+                {
+                    result_diagnos="normale"
+                }
+                
+            }
+            return result_diagnos;
         }
        
     }

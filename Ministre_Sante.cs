@@ -7,20 +7,24 @@ using System.Data.SqlClient;
 
 namespace Suivi_malade_corona
 {
-    class Ministre_Sante
+    public class Ministre_Sante
     {
-        private Cas Cas=new Cas();
+        private Cas Cas;
         public Cas cas{
         get=>Cas;
             set=>Cas=value;
         }
-        public void change_cas(Citoyen c){
-        if(c.ajout==true);
-        }
+
+       // public void change_cas(Citoyen c){
+        //if(c.ajout==true)
+          //  {
+
+            //}
+       // }
         
-         public void  recoit_donnee()
-        {
+       //  public void  recoit_donnee()
+        //{
             //this.cas.cas_actifs;
-        }
+        //}
     }
 }

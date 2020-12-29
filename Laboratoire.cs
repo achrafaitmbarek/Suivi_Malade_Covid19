@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Suivi_malade_corona
 {
-    class Laboratoire
+   public class Laboratoire
     {
         
         private string Nom;

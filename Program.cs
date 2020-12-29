@@ -13,6 +13,7 @@ namespace Suivi_malade_corona
         static SqlConnection connc=new SqlConnection(chaine);
         static void Main(string[] args)
         { 
+
             
             //Citoyen citoyen =new Citoyen("Ait MBAREK","ACHRAF",0697294140,"VA1111","Midelt");
             var Citoyens =new List<Citoyen>();

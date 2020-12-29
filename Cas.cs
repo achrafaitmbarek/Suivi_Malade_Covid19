@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Suivi_malade_corona
 {
-    class Cas
+   public class Cas
     {
         private int Cas_Décès;
         private int Cas_Confirmés;
