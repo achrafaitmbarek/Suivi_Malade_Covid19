@@ -49,12 +49,12 @@ namespace Suivi_malade_corona
 	        {
                 C.etat_clr="rouge";
                 C.test_result="positif";
-                this.Ministre.cas.cas_actifs=;
+               // this.Ministre.cas.cas_actifs=;
 	        }
             else{
-                C.etat_clr="vert";
+                C.etat_clr="orange";
                 C.test_result="negatif";
-                this.Ministre.cas.cas_exclus++;
+                //this.Ministre.cas.cas_exclus++;
             }
         }
         public void Faire_Vacccin(Citoyen c){
