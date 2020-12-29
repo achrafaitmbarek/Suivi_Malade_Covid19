@@ -17,7 +17,7 @@ namespace Suivi_malade_corona
         private int Cas_Exclus;
 
         public Cas(){
-        this.Cas_Actifs=0;
+            this.Cas_Actifs=0;
             this.Cas_Grave=0;
             this.Cas_Confirmés=0;
             this.Cas_Guérisons=0;

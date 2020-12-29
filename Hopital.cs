@@ -65,7 +65,10 @@ namespace Suivi_malade_corona
         {
             if(c.test_result=="positif") // si le citoyen est positif on lui fait le diagno
             {
-            
+            if(c.cahier_medicale.allergie==true||c.cahier_medicale.maladie_chronique==true)
+                {
+
+                }
             }
         }
     }

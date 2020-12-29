@@ -12,9 +12,9 @@ namespace Suivi_malade_corona
         private int Num_Cahier;
         private string Nom_Docteur;
         private string Situation_Familiale;
-        private string Allergie;
+        private bool Allergie=false;
         private string Date_Prise_En_Charge;
-        private string Maladie_Chronique;
+        private bool Maladie_Chronique=false;
         //accessors
         public int num_cahier{
         get=> Num_Cahier;
@@ -31,7 +31,7 @@ namespace Suivi_malade_corona
         set=> Situation_Familiale=value;
         }
         
-        public string allergie{
+        public bool allergie{
         get=>Allergie;
         set=> Allergie=value;
         }
@@ -41,7 +41,7 @@ namespace Suivi_malade_corona
         set=> Date_Prise_En_Charge=value;
         }
         
-        public string maladie_chronique{
+        public bool maladie_chronique{
         get=>Maladie_Chronique;
         set=> Maladie_Chronique=value;
         }

@@ -15,7 +15,7 @@ namespace Suivi_malade_corona
         private string Num_Identite;
         private string Adresse;
         private string Sexe;
-        private Cahier_Medicale Cahier_Medicale;
+        private Cahier_Medicale Cahier_Medicale=new Cahier_Medicale();
         private string Test_Result;
         private string Etat_Clr;
         private string Vaccine;
