@@ -50,11 +50,11 @@ namespace Suivi_malade_corona
         this.Num_Cahier=0;
         this.Nom_Docteur=string.Empty;
         this.Situation_Familiale=string.Empty;
-        this.Allergie=string.Empty;
+        this.Allergie=false;
         this.Date_Prise_En_Charge=string.Empty;
-        this.Maladie_Chronique=string.Empty;
+        this.Maladie_Chronique=false;
         }
-        public Cahier_Medicale(int Num_Cahier,string Nom_Docteur, string Situation_Familiale ,string Allergie ,string Date_Prise_En_Charge ,string Maladie_Chronique){
+        public Cahier_Medicale(int Num_Cahier,string Nom_Docteur, string Situation_Familiale ,bool Allergie ,string Date_Prise_En_Charge ,bool Maladie_Chronique){
             this.num_cahier=Num_Cahier;
             this.nom_docteur=Nom_Docteur;
             this.situation_familiale=Situation_Familiale;
