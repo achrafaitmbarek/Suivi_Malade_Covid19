@@ -57,7 +57,7 @@ namespace Suivi_malade_corona
             }
         }
         public void Faire_Vacccin(Citoyen c){
-            string vaccin_rep=console.asking("vous avez vacciner ce citoyen? (SVP reponds pra oui ou non)");
+            string vaccin_rep=console.asking("vous avez vacciner ce citoyen? (SVP reponds par oui ou non)");
             if (vaccin_rep=="oui")
 	        {
                 c.vaccine="vaccine";
@@ -124,7 +124,7 @@ namespace Suivi_malade_corona
                 }
                 else
                 {
-                    result_diagnos="normale"
+                    result_diagnos="normale";
                 }
                 
             }
