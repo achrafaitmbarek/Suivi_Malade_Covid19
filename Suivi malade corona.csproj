@@ -47,8 +47,9 @@
     <Compile Include="Cas.cs" />
     <Compile Include="Citoyen.cs" />
     <Compile Include="Hopital.cs" />
-	  <Compile Include="Laboratoire.cs" />
+    <Compile Include="Laboratoire.cs" />
     <Compile Include="Ministre_Sante.cs" />
+    <Compile Include="Persistance.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

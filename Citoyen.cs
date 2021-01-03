@@ -15,51 +15,23 @@ namespace Suivi_malade_corona
         private string Num_Identite;
         private string Adresse;
         private string Sexe;
-        private Cahier_Medicale Cahier_Medicale=new Cahier_Medicale();
+        private Cahier_Medicale Cahier_Medicale;
         private string Test_Result;
         private string Etat_Clr;
         private string Vaccine;
        
         private string Etat;// mort ou vif ou etat grave ou gueri
         //accesseurs
-        public string etat{
-        get=>Etat;
-            set=>Etat=value;
-        }
-        public string vaccine{
-        get=>Vaccine;
-            set=>Vaccine=value;
-        }
-        public string nom{
-        get=>Nom;
-            set=>Nom=value;
-        }
-        public string prenom { 
-        get =>Prenom;
-            set=> prenom=value;
-        }
-        public int num_telephone{
-        get=>Num_Telephone;
-            set=> Num_Telephone=value;
-        }
-        public string num_identite{
-        get =>Num_Identite;
-            set=>Num_Identite=value;
-        } 
-        public string adresse{
-        get=>Adresse;
-            set=>Adresse=value;
-        }
-        public string sexe{
-        get=>Sexe;
-           set=>Sexe=value;
-        }
-        public Cahier_Medicale cahier_medicale{
-        get=>Cahier_Medicale;
-            set=>Cahier_Medicale=value;
-        }
-        public string test_result{
-        get=>Test_Result;
+        public string etat{ get=>Etat;set=>Etat=value;}
+        public string vaccine{ get=>Vaccine; set=>Vaccine=value;}
+        public string nom{get=>Nom; set=>Nom=value; }
+        public string prenom { get =>Prenom;set=> prenom=value; }
+        public int num_telephone{get=>Num_Telephone;set=> Num_Telephone=value;}
+        public string num_identite{ get =>Num_Identite;set=>Num_Identite=value;} 
+        public string adresse{get=>Adresse;set=>Adresse=value;}
+        public string sexe{get=>Sexe;set=>Sexe=value;}
+        public Cahier_Medicale cahier_medicale{get=>Cahier_Medicale;set=>Cahier_Medicale=value;}
+        public string test_result{get=>Test_Result;
             set
             {
                 if (test_result=="positif"||test_result=="negatif")
@@ -69,10 +41,7 @@ namespace Suivi_malade_corona
                 
             }
         }
-        public string etat_clr{
-        get=>Etat_Clr;
-            set=>Etat_Clr=value;
-        }
+        public string etat_clr{get=>Etat_Clr;set=>Etat_Clr=value;}
         ////constructeur
         public Citoyen(){
             this.Etat_Clr="orange";
