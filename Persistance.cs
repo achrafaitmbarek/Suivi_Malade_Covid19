@@ -17,10 +17,11 @@
             static SqlConnection cnx = new SqlConnection(cnx_chaine);
             static SqlCommand cmd = new SqlCommand();
             static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
+           
             public void Ajout_Nouveau_Cas(Citoyen C)//Ici on va faire l'ajout des cas +le test avant d les ajouter si positif =>cas positif ..........
             {
                 cnx.Open();
+            
 
                 if (C.test_result == "positif")
                 {
