@@ -20,7 +20,7 @@ namespace Suivi_malade_corona
         private string Etat_Clr;
         private string Vaccine;
        
-        private string Etat;// mort ou vif ou etat grave ou gueri
+        private string Etat;// mort ou etat grave ou gueri
         //accesseurs
         public string etat{ get=>Etat;set=>Etat=value;}
         public string vaccine{ get=>Vaccine; set=>Vaccine=value;}
