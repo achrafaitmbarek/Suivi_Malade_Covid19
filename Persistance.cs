@@ -1,5 +1,4 @@
-﻿
-    using System;
+﻿    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
@@ -10,6 +9,7 @@
 
         public class Persistance
         {
+        
             private Citoyen C;
             public Citoyen c { get => C; set => C = value; }
 
@@ -17,17 +17,19 @@
             static SqlConnection cnx = new SqlConnection(cnx_chaine);
             static SqlCommand cmd = new SqlCommand();
             static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-           
+            public Persistance()
+        {
+
+        }
             public void Ajout_Nouveau_Cas(Citoyen C)//Ici on va faire l'ajout des cas +le test avant d les ajouter si positif =>cas positif ..........
             {
                 cnx.Open();
-            
-
                 if (C.test_result == "positif")
                 {
 
                     if (C.etat == "mort")
                     {
+                    
                         cmd.Connection = cnx;
                         cmd.CommandText = ""; //on l'ajoute au Cas Décès;
                         cmd.ExecuteNonQuery();

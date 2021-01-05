@@ -44,7 +44,7 @@ namespace Suivi_malade_corona
         this.Nom=string.Empty;
         }
         public void Test_Pcr(Citoyen C){
-            string test=console.asking("le test est positif ou negatif?");
+            string test = string.Empty;//"le test est positif ou negatif?
             if (test=="positif")
 	        {
                 C.etat_clr="rouge";
@@ -58,7 +58,7 @@ namespace Suivi_malade_corona
             }
         }
         public void Faire_Vacccin(Citoyen c){
-            string vaccin_rep=console.asking("vous avez vacciner ce citoyen? (SVP reponds par oui ou non)");
+            string vaccin_rep = string.Empty;//"vous avez vacciner ce citoyen? (SVP reponds par oui ou non)"
             if (vaccin_rep=="oui")
 	        {
                 c.vaccine="vaccine";
@@ -72,21 +72,21 @@ namespace Suivi_malade_corona
         }
         public string ECG(Citoyen c)//Electro_Cardio_Gram
         {
-            
-            string result =console.asking("le resultat d'ECG est normale ou grave ");
+
+            string result =string.Empty;//"le resultat d'ECG est normale ou grave ");
             
             while(result!="grave"||result!="normale")
             {
-                result=console.asking("saisie non-valide! svp noramle ou grave");
+                result = string.Empty;//"saisie non-valide! svp noramle ou grave");
             }
             return result;
         }
         public string SPO2(Citoyen c)//La saturation pulsée en oxygène
         {
-            string result =console.asking("oxygen est sature ou non-sature ?");
+            string result = string.Empty;//"oxygen est sature ou non-sature ?");
             while(result!="sature"||result!="non-sature")
             {
-                result=console.asking("saisie non-valide! svp sature ou non-sature");
+                result = string.Empty;//"saisie non-valide! svp sature ou non-sature");
             }
             return result;
         }
@@ -131,6 +131,10 @@ namespace Suivi_malade_corona
             }
             return result_diagnos;
         }
-       
+      
+       public void Test_Priorite_Vaccin(Citoyen C)
+        {
+
+        }
     }
 }

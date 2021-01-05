@@ -9,6 +9,7 @@ namespace Suivi_malade_corona
 {
    public class Cas
     {
+        
         private int Cas_Décès;
         private int Cas_Confirmés;
         private int Cas_Guérisons;
