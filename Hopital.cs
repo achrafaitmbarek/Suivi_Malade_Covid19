@@ -14,8 +14,6 @@ namespace Suivi_malade_corona
         private int Nbrs_Lits_Reanimation; 
         private int Nbrs_Chambres_Occupees;
         private Ministre_Sante Ministre;
-       
-
         public Ministre_Sante ministre {
         get=>Ministre;
             set=>Ministre=value;
@@ -105,34 +103,27 @@ namespace Suivi_malade_corona
             return result;
         }
 
-        public string Diagnostique(Citoyen c)
+        public void Diagnostique(Citoyen c)//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
         {
-            string result_diagnos=string.Empty;
 
             if (c.test_result == "positif") // si le citoyen est positif on lui fait le diagno
             {
                 if (Consultation_cahier(c)=="grave")
 	            {
-                  result_diagnos="grave";
+                  c.score_diagnostique = 20;
 	            }
-                else if(SPO2(c)=="non-sature")
+                if(SPO2(c)=="non-sature")
                 {
-                    result_diagnos="grave";
+                    c.score_diagnostique = c.score_diagnostique+40;
                 }
-                else if(ECG(c)=="grave")
+                if(ECG(c)=="grave")
                 {
-                    result_diagnos="grave";
+                   c.score_diagnostique=c.score_diagnostique+50;
                 }
-                else
-                {
-                    result_diagnos="normale";
-                }
-                
             }
-            return result_diagnos;
         }
       
-       public void Test_Priorite_Vaccin(Citoyen C)
+       public void Test_Priorite_Vaccin(Citoyen C)////chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
         {
 
         }

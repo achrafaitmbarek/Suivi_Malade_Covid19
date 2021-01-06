@@ -13,6 +13,7 @@ namespace Suivi_malade_corona
     public partial class Form1 : Form
     {
         Citoyen C1 = new Citoyen();
+        Persistance p=new Persistance();
         public Form1()
         {
             InitializeComponent();

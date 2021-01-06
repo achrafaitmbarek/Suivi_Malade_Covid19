@@ -4,6 +4,8 @@
     using System.Text;
     using System.Threading.Tasks;
     using System.Data.SqlClient;
+    using System.Data;
+    using System.Windows.Forms;
     namespace Suivi_malade_corona
     {
 
@@ -15,52 +17,64 @@
 
             static string cnx_chaine = "Data Source=DESKTOP-FQACM7G;Initial Catalog=covid19management;Integrated Security=True";
             static SqlConnection cnx = new SqlConnection(cnx_chaine);
-            static SqlCommand cmd = new SqlCommand();
-            static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            public Persistance()
-        {
-
-        }
-            public void Ajout_Nouveau_Cas(Citoyen C)//Ici on va faire l'ajout des cas +le test avant d les ajouter si positif =>cas positif ..........
+            static SqlCommand command = new SqlCommand();
+            static SqlDataAdapter adapter = new SqlDataAdapter(command);
+            public Persistance(){}
+            public static void Ajout_Nouveau_Cas(Citoyen C)//Ici on va faire l'ajout des cas +le test avant d les ajouter si positif =>cas positif ..........
             {
-                cnx.Open();
+               try 
+	          {	        
+		         cnx.Open();
                 if (C.test_result == "positif")
                 {
 
                     if (C.etat == "mort")
                     {
                     
-                        cmd.Connection = cnx;
-                        cmd.CommandText = ""; //on l'ajoute au Cas Décès;
-                        cmd.ExecuteNonQuery();
+                        command.Connection = cnx;
+                        command.CommandText = ""; //on l'ajoute au Cas Décès;
+                        command.ExecuteNonQuery();
 
                     }
                     else if (C.etat == "grave")
                     {
-                        cmd.Connection = cnx;
-                        cmd.CommandText = ""; //on l'ajoute au Cas Grave;
-                        cmd.ExecuteNonQuery();
+                        command.Connection = cnx;
+                        command.CommandText = ""; //on l'ajoute au Cas Grave;
+                        command.ExecuteNonQuery();
 
                     }
                     else if (C.etat == "gueri")
                     {
-                        cmd.Connection = cnx;
-                        cmd.CommandText = ""; //on l'ajoute au Cas gueri
-                        cmd.ExecuteNonQuery();
+                        command.Connection = cnx;
+                        command.CommandText = ""; //on l'ajoute au Cas gueri
+                        command.ExecuteNonQuery();
                     }
-                    cmd.Connection = cnx;
-                    cmd.CommandText = ""; //et on l'ajoute au cas positif
-                    cmd.ExecuteNonQuery();
+                    command.Connection = cnx;
+                    command.CommandText = ""; //et on l'ajoute au cas positif
+                    command.ExecuteNonQuery();
 
                 }
-                else if (C.test_result == "negatif")
-                {
-                    cmd.Connection = cnx;
-                    cmd.CommandText = ""; //on l'ajoute au Cas Exclus;
-                    cmd.ExecuteNonQuery();
-
-                }
-                cnx.Close();
+                 else if (C.test_result == "negatif")
+                   {
+                    command.Connection = cnx;
+                    command.CommandText = ""; //on l'ajoute au Cas Exclus;
+                    command.ExecuteNonQuery();
+                   }
+                
+	           }
+	         catch (Exception ex)
+	        {
+                 MessageBox.Show(ex.Message);
+               
+	        }
+            finally{
+               if (cnx.State==System.Data.ConnectionState.Open)
+	           {
+                 cnx.Close();   
+	           }
+              }
             }
+
+      //  public void
         }
     }
