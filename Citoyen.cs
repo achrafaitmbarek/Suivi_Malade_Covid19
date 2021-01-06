@@ -16,14 +16,16 @@ namespace Suivi_malade_corona
         private string Num_Identite;
         private string Adresse;
         private string Sexe;
-        private Cahier_Medicale Cahier_Medicale=new Cahier_Medicale();
+        private Cahier_Medicale Cahier_Medicale;
         private string Test_Result;
         private string Etat_Clr;
         private string Vaccine;
-        private int Score_Vaccin ;//chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
+        private int Score_Vaccin;//chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
         private int Score_Diganostique;//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
         private string Etat;// mort ou vif ou etat grave ou gueri
+        private string Statut;//prise en charge ou bien confine chez lui 
         //accesseurs
+        public string statut {get => Statut; set => Statut = value;} 
         public int score_vaccin{get=>Score_Vaccin;set=>Score_Vaccin=value;}
         public int score_diagnostique { get => Score_Diganostique; set => Score_Diganostique = value; }
         public string etat{get=>Etat; set=>Etat=value;}

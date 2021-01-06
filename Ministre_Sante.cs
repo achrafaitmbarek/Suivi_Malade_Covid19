@@ -9,6 +9,7 @@ namespace Suivi_malade_corona
 {
     public class Ministre_Sante
     {
+
         private Cas Cas;
         public Cas cas{
         get=>Cas;
@@ -21,10 +22,5 @@ namespace Suivi_malade_corona
 
             //}
        // }
-        
-       //  public void  recoit_donnee()
-        //{
-            //this.cas.cas_actifs;
-        //}
     }
 }
