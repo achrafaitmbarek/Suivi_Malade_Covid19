@@ -108,23 +108,25 @@ namespace Suivi_malade_corona
 
             if (c.test_result == "positif") // si le citoyen est positif on lui fait le diagno
             {
+                c.score_diagnostique = 0;
                 if (Consultation_cahier(c)=="grave")
 	            {
                   c.score_diagnostique = 20;
 	            }
                 if(SPO2(c)=="non-sature")
                 {
-                    c.score_diagnostique = c.score_diagnostique+40;
+                    c.score_diagnostique +=40;
                 }
                 if(ECG(c)=="grave")
                 {
-                   c.score_diagnostique=c.score_diagnostique+50;
+                   c.score_diagnostique+=40;
                 }
             }
         }
       
        public void Test_Priorite_Vaccin(Citoyen C)////chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
         {
+            //Corps sanitaire ,le sujet ages ,L'immunodépression ,qui souffre de maladie chronique ,qui ont +18
 
         }
     }

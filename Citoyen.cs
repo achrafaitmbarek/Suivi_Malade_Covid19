@@ -53,7 +53,7 @@ namespace Suivi_malade_corona
             this.Etat_Clr="orange";
             this.Vaccine="non vaccine";
         }
-        public Citoyen( string Nom, string Prenom, int Num_Telephone,string Num_Identite, string Adresse, string Sexe, Cahier_Medicale Cahier_Medicale, string Etat_Clr,string Etat)
+        public Citoyen( string Nom, string Prenom, int Num_Telephone,string Num_Identite, string Adresse, string Sexe/*, Cahier_Medicale Cahier_Medicale*/, string Etat_Clr,string Etat)
         {
             this.nom=Nom;
             this.prenom=Prenom;
