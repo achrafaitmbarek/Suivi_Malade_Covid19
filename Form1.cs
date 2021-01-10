@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace Suivi_malade_corona
 {
+    
     public partial class Form1 : Form
     {
-        Citoyen C1 = new Citoyen();
-        Persistance p=new Persistance();
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +20,6 @@ namespace Suivi_malade_corona
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          MessageBox.Show(C1.nom);
         }
     }
 }
