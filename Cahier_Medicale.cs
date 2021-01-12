@@ -8,60 +8,39 @@ namespace Suivi_malade_corona
 {
    public class Cahier_Medicale
     {
-        private int Num_Cahier;
+        private string Num_Identite;
         private string Nom_Docteur;
         private string Situation_Familiale;
         private bool Allergie = false;
         private DateTime Date_Prise_En_Charge;
         private bool Maladie_Chronique = false;
+        private bool Immunodépression=false;
         //accessors
-        public int num_cahier
-        {
-            get => Num_Cahier;
-            set => Num_Cahier = value;
-        }
+        public bool immunodépression{get=>Immunodépression;set=>Immunodépression=value;}
 
-        public string nom_docteur
-        {
-            get => Nom_Docteur;
-            set => Nom_Docteur = value;
-        }
+       public string num_identite{get=>Num_Identite;set=>Num_Identite=value;}
 
-        public string situation_familiale
-        {
-            get => Situation_Familiale;
-            set => Situation_Familiale = value;
-        }
+        public string nom_docteur{ get => Nom_Docteur; set => Nom_Docteur = value;}
 
-        public bool allergie
-        {
-            get => Allergie;
-            set => Allergie = value;
-        }
+        public string situation_familiale{ get => Situation_Familiale; set => Situation_Familiale = value; }
 
-        public DateTime date_prise_en_charge
-        {
-            get => Date_Prise_En_Charge;
-            set => Date_Prise_En_Charge = value;
-        }
+        public bool allergie{ get => Allergie;set => Allergie = value;}
 
-        public bool maladie_chronique
-        {
-            get => Maladie_Chronique;
-            set => Maladie_Chronique = value;
-        }
+        public DateTime date_prise_en_charge{get => Date_Prise_En_Charge;set => Date_Prise_En_Charge = value; }
+
+        public bool maladie_chronique {get => Maladie_Chronique;set => Maladie_Chronique = value;}
         //constructer
         public Cahier_Medicale()
         {
-            this.Num_Cahier = 0;
+            this.Num_Identite=string.Empty; 
             this.Nom_Docteur = string.Empty;
             this.Situation_Familiale = string.Empty;
             this.Allergie = false;
             this.Maladie_Chronique = false;
         }
-        public Cahier_Medicale(int Num_Cahier, string Nom_Docteur, string Situation_Familiale, bool Allergie, DateTime Date_Prise_En_Charge, bool Maladie_Chronique)
+        public Cahier_Medicale( string Num_Identite,string Nom_Docteur, string Situation_Familiale, bool Allergie, DateTime Date_Prise_En_Charge, bool Maladie_Chronique)
         {
-            this.num_cahier = Num_Cahier;
+            this.num_identite = Num_Identite;
             this.nom_docteur = Nom_Docteur;
             this.situation_familiale = Situation_Familiale;
             this.allergie = Allergie;

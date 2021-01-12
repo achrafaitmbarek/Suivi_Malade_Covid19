@@ -24,7 +24,10 @@ namespace Suivi_malade_corona
         private int Score_Diganostique;//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
         private string Etat;// mort ou vif ou etat grave ou gueri
         private string Statut;//prise en charge ou bien confine chez lui 
+        private DateTime Date_Naissance;
+
         //accesseurs
+        public DateTime date_naissance{ get => Date_Naissance; set => Date_Naissance = value; }
         public string statut {get => Statut; set => Statut = value;} 
         public int score_vaccin{get=>Score_Vaccin;set=>Score_Vaccin=value;}
         public int score_diagnostique { get => Score_Diganostique; set => Score_Diganostique = value; }
