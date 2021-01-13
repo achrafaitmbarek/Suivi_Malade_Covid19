@@ -40,7 +40,6 @@ namespace Suivi_malade_corona
            // command.CommandText = "insert into Cas(Cas_Deces,Cas_Confirmes,Cas_Guerisons,Cas_Actifs,Cas_Grave,Cas_Exclus) values('" 
             //+ C1.cas_décès + "','" + C1.cas_confirmés + "','" + C1.cas_guérisons + "','" + C1.cas_actifs + "','" +C1.cas_grave + "','" + C1.cas_exclus +
             //"')";
-
             // cmd.CommandText = "insert into Dossier(ID_DOSSIER, NOM_DOSSIER) values('" + txtId_dossier.Text + "','" + txtNom_dossier.Text + "') ";
 
             //command.CommandText = "insert into Cas(Cas_Deces, Cas_Confirmes,Cas_Guerisons,Cas_Actifs,Cas_Grave,Cas_Exclus) values('12','22','22','22','22','22') "; //Test Du BD
@@ -49,7 +48,6 @@ namespace Suivi_malade_corona
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
         }
     }
 }

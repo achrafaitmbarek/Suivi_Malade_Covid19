@@ -44,5 +44,12 @@ namespace Suivi_malade_corona
             Slide_Panel.Top = Cahier_Medicale_button.Top;
             cahier_Medicale_Citoyen1.BringToFront();
         }
+
+        private void Consultation_Etat_button_Click(object sender, EventArgs e)
+        {
+            Slide_Panel.Height = Consultation_Etat_button.Height;
+            Slide_Panel.Top = Consultation_Etat_button.Top;
+            consulte_Etat1.BringToFront();
+        }
     }
 }

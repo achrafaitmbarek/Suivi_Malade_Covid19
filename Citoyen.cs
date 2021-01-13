@@ -9,7 +9,6 @@ namespace Suivi_malade_corona
 {
     public class Citoyen
     {
-        
         private string Nom;
         private string Prenom;
         private int Num_Telephone;
@@ -43,8 +42,7 @@ namespace Suivi_malade_corona
         public string test_result{
         get=>Test_Result;
             set
-            {
-                if (test_result=="positif"||test_result=="negatif")
+            { if (test_result=="positif"||test_result=="negatif")
 	            {
                     Test_Result=value; 
 	            } 
