@@ -58,6 +58,7 @@
             this.Consulter_Button.TabIndex = 42;
             this.Consulter_Button.Text = "Consulter";
             this.Consulter_Button.UseVisualStyleBackColor = false;
+            this.Consulter_Button.Click += new System.EventHandler(this.Consulter_Button_Click);
             // 
             // textBox1
             // 

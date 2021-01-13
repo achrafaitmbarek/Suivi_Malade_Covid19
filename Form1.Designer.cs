@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Consultation_Etat_button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Slide_Panel = new System.Windows.Forms.Panel();
             this.Cahier_Medicale_button = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.cahier_Medicale_Citoyen1 = new Suivi_malade_corona.Cahier_Medicale_Citoyen();
             this.citoyenControl1 = new Suivi_malade_corona.CitoyenControl();
             this.consulte_Etat1 = new Suivi_malade_corona.Consulte_Etat();
-            this.Consultation_Etat_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 576);
             this.panel1.TabIndex = 0;
+            // 
+            // Consultation_Etat_button
+            // 
+            this.Consultation_Etat_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Consultation_Etat_button.FlatAppearance.BorderSize = 0;
+            this.Consultation_Etat_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Consultation_Etat_button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Consultation_Etat_button.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Consultation_Etat_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Consultation_Etat_button.Location = new System.Drawing.Point(0, 231);
+            this.Consultation_Etat_button.Name = "Consultation_Etat_button";
+            this.Consultation_Etat_button.Size = new System.Drawing.Size(249, 59);
+            this.Consultation_Etat_button.TabIndex = 4;
+            this.Consultation_Etat_button.Text = "Consultation d\'Etat";
+            this.Consultation_Etat_button.UseVisualStyleBackColor = false;
+            this.Consultation_Etat_button.Click += new System.EventHandler(this.Consultation_Etat_button_Click);
             // 
             // button4
             // 
@@ -146,22 +162,6 @@
             this.consulte_Etat1.Name = "consulte_Etat1";
             this.consulte_Etat1.Size = new System.Drawing.Size(624, 508);
             this.consulte_Etat1.TabIndex = 4;
-            // 
-            // Consultation_Etat_button
-            // 
-            this.Consultation_Etat_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Consultation_Etat_button.FlatAppearance.BorderSize = 0;
-            this.Consultation_Etat_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Consultation_Etat_button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Consultation_Etat_button.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Consultation_Etat_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Consultation_Etat_button.Location = new System.Drawing.Point(0, 231);
-            this.Consultation_Etat_button.Name = "Consultation_Etat_button";
-            this.Consultation_Etat_button.Size = new System.Drawing.Size(249, 59);
-            this.Consultation_Etat_button.TabIndex = 4;
-            this.Consultation_Etat_button.Text = "Consultation d\'Etat";
-            this.Consultation_Etat_button.UseVisualStyleBackColor = false;
-            this.Consultation_Etat_button.Click += new System.EventHandler(this.Consultation_Etat_button_Click);
             // 
             // Form1
             // 

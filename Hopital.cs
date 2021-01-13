@@ -139,6 +139,7 @@ namespace Suivi_malade_corona
         private void vaccin(Citoyen c)
         {
             c.etat_clr = "vert";
+            c.vaccine = "vaccine";
         }
     }
 }

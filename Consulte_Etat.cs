@@ -16,5 +16,10 @@ namespace Suivi_malade_corona
         {
             InitializeComponent();
         }
+
+        private void Consulter_Button_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
