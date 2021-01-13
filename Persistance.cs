@@ -43,10 +43,9 @@
         {
             cnx.Open();
             command.Connection = cnx;
-            //command.CommandText = "delete from Citoyen ";
-            //command.CommandText = "insert into Citoyen(Num_Identite,Nom,Prenom,Num_Telephone,Etat,Adresse,Sexe,Test_Result,Etat_Clr,Vaccine,Statut,Score_Vaccin,Score_Diagnostique) values('"
-          //  + c.num_identite+ "','" + c.nom+ "','" + c.num_telephone + "','" + c.etat + "','" + c.adresse + "','" + c.sexe +
-            //"','"+c.vaccine+"','"+c.statut+"','"+c.score_vaccin+"','"+c.score_diagnostique+"')";
+            command.CommandText = "insert into Citoyen(Num_Identite,Nom,Prenom,Num_Telephone,Etat,Adresse,Sexe,Test_Result,Etat_Clr,Vaccine,Statut,Score_Vaccin,Score_Diagnostique) values('"
+            + c.num_identite+ "','" + c.nom+ "','" + c.num_telephone + "','" + c.etat + "','" + c.adresse + "','" + c.sexe +
+            "','"+c.vaccine+"','"+c.statut+"','"+c.score_vaccin+"','"+c.score_diagnostique+"')";
             if (c.test_result=="positif")
 	        {
                 command.CommandText = "update Cas set Cas_Confirmes=Cas_Confirmes+1";
@@ -61,7 +60,7 @@
         public void Consulter_Etat_Citoyen(Citoyen c)
         {
             cnx.Open();
-            command.CommandText = "select * from Cahier_Medicale where Num_Identite='"+c.num_identite+"'";
+            command.CommandText = "select * from Citoyen where Num_Identite='"+c.num_identite+"'";
             command.ExecuteNonQuery();
             cnx.Close();
         }
@@ -72,6 +71,5 @@
             command.ExecuteNonQuery();
             cnx.Close();
         }
-        
         }
     }

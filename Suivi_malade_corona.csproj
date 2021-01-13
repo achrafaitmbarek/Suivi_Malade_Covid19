@@ -68,6 +68,7 @@
       <DependentUpon>Cahier_Medicale_Citoyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Cas.cs" />
+    <Compile Include="CConfinement.cs" />
     <Compile Include="Citoyen.cs" />
     <Compile Include="CitoyenControl.cs">
       <SubType>UserControl</SubType>
