@@ -114,14 +114,31 @@ namespace Suivi_malade_corona
         {
             C.score_vaccin = 0;
             
-            //Corps sanitaire ,le sujet ages ,L'immunodépression ,qui souffre de maladie chronique ,qui ont +18
+            //Corps sanitaire ,le sujet ages ,L'immunodépression ,qui souffre de maladie chronique ,qui ont +18 
             if (C.cahier_medicale.immunodépression == true) 
             {
-                C.score_vaccin += 25;
+                C.score_vaccin += 40;
             }
-            if (C.date_naissance.Year-DateTime.Now.Year<18) 
+            if (C.date_naissance.Year-DateTime.Now.Year<50) 
             {
+                C.score_vaccin +=15;
             }
+            if (C.score_diagnostique<100)
+            {
+                C.score_vaccin += 10;
+            }
+            if (C.cahier_medicale.maladie_chronique==true)
+            {
+                C.score_vaccin +=20;
+            }
+            if (C.score_vaccin>50)
+            {
+                vaccin(C);
+            }
+        }
+        private void vaccin(Citoyen c)
+        {
+            c.etat_clr = "vert";
         }
     }
 }
