@@ -11,7 +11,6 @@
 
         public class Persistance
         {
-        
             private Citoyen C;
             public Citoyen c { get => C; set => C = value; }
 
@@ -25,42 +24,6 @@
                try 
 	          {	        
 		         cnx.Open();
-                if (C.test_result == "positif")
-                {
-
-                    if (C.etat == "mort")
-                    {
-                    
-                        command.Connection = cnx;
-                        command.CommandText = ""; //on l'ajoute au Cas Décès;
-                        command.ExecuteNonQuery();
-
-                    }
-                    else if (C.etat == "grave")
-                    {
-                        command.Connection = cnx;
-                        command.CommandText = ""; //on l'ajoute au Cas Grave;
-                        command.ExecuteNonQuery();
-
-                    }
-                    else if (C.etat == "gueri")
-                    {
-                        command.Connection = cnx;
-                        command.CommandText = ""; //on l'ajoute au Cas gueri
-                        command.ExecuteNonQuery();
-                    }
-                    command.Connection = cnx;
-                    command.CommandText = ""; //et on l'ajoute au cas positif
-                    command.ExecuteNonQuery();
-
-                }
-                 else if (C.test_result == "negatif")
-                   {
-                    command.Connection = cnx;
-                    command.CommandText = ""; //on l'ajoute au Cas Exclus;
-                    command.ExecuteNonQuery();
-                   }
-                
 	           }
 	         catch (Exception ex)
 	        {
@@ -75,6 +38,40 @@
               }
             }
 
-      //  public void
+
+      public void AjoutCitoyen(Citoyen c)
+        {
+            cnx.Open();
+            command.Connection = cnx;
+            //command.CommandText = "delete from Citoyen ";
+            //command.CommandText = "insert into Citoyen(Num_Identite,Nom,Prenom,Num_Telephone,Etat,Adresse,Sexe,Test_Result,Etat_Clr,Vaccine,Statut,Score_Vaccin,Score_Diagnostique) values('"
+          //  + c.num_identite+ "','" + c.nom+ "','" + c.num_telephone + "','" + c.etat + "','" + c.adresse + "','" + c.sexe +
+            //"','"+c.vaccine+"','"+c.statut+"','"+c.score_vaccin+"','"+c.score_diagnostique+"')";
+            if (c.test_result=="positif")
+	        {
+                command.CommandText = "update Cas set Cas_Confirmes=Cas_Confirmes+1";
+            }
+            if (c.test_result == "negatif")
+            {
+                command.CommandText = "update Cas set Cas_Exclus=Cas_Exclus+1";
+            }
+            command.ExecuteNonQuery();
+            cnx.Close();
+        }
+        public void Consulter_Etat_Citoyen(Citoyen c)
+        {
+            cnx.Open();
+            command.CommandText = "select * from Cahier_Medicale where Num_Identite='"+c.num_identite+"'";
+            command.ExecuteNonQuery();
+            cnx.Close();
+        }
+        public void Consulte_Cahier_Medicale(Citoyen C)
+        {
+            cnx.Open();
+            command.CommandText = "select * from Cahier_Medicale where Num_Identite='" + c.num_identite + "'";
+            command.ExecuteNonQuery();
+            cnx.Close();
+        }
+        
         }
     }

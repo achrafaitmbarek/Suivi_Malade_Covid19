@@ -61,9 +61,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cahier_Medicale.cs" />
+    <Compile Include="Cahier_Medicale_Citoyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cahier_Medicale_Citoyen.Designer.cs">
+      <DependentUpon>Cahier_Medicale_Citoyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cas.cs" />
     <Compile Include="Citoyen.cs" />
+    <Compile Include="CitoyenControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CitoyenControl.Designer.cs">
+      <DependentUpon>CitoyenControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Confinement.cs" />
+    <Compile Include="Consulte_Etat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consulte_Etat.Designer.cs">
+      <DependentUpon>Consulte_Etat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,15 @@
     <Compile Include="Persistance.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cahier_Medicale_Citoyen.resx">
+      <DependentUpon>Cahier_Medicale_Citoyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CitoyenControl.resx">
+      <DependentUpon>CitoyenControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulte_Etat.resx">
+      <DependentUpon>Consulte_Etat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

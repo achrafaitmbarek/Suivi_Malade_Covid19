@@ -20,7 +20,7 @@ namespace Suivi_malade_corona
         private string Test_Result;
         private string Etat_Clr;
         private string Vaccine;
-        private int Score_Vaccin;//chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
+        private int Score_Vaccin;//chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin si >50 on donne le vaccin sinon on le donne pas 
         private int Score_Diganostique;//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
         private string Etat;// mort ou vif ou etat grave ou gueri
         private string Statut;//prise en charge ou bien confine chez lui 
