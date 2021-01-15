@@ -24,6 +24,10 @@ namespace Suivi_malade_corona
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Citoyen c = new Citoyen();
+            Hopital h = new Hopital();
+            consulte_Etat1.Text ="12";
+            h.Faire_Vacccin(c,consulte_Etat1.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
