@@ -41,19 +41,7 @@ namespace Suivi_malade_corona
                 //this.Ministre.cas.cas_exclus++;
             }
         }
-        public void Faire_Vacccin(Citoyen c) {
-            string vaccin_rep = string.Empty;//"vous avez vacciner ce citoyen? (SVP reponds par oui ou non)"
-            if (vaccin_rep == "oui")
-            {
-                c.vaccine = "vaccine";
-                c.etat_clr = "vert";
-            }
-            else
-            {
-                c.vaccine = "non vaccine";
-                c.etat_clr = "orange";
-            }
-        }
+        
         public string ECG(Citoyen c)//Electro_Cardio_Gram
         {
 
@@ -134,6 +122,19 @@ namespace Suivi_malade_corona
             if (C.score_vaccin>50)
             {
                 vaccin(C);
+            }
+        }
+        public void Faire_Vacccin(Citoyen c ,string vaccin_rep) {
+            //"vous avez vacciner ce citoyen? (SVP reponds par oui ou non)"
+           if (vaccin_rep == "oui")
+            {
+                c.vaccine = "vaccine";
+                c.etat_clr = "vert";
+            }
+            else
+            {
+                c.vaccine = "non vaccine";
+                c.etat_clr = "orange";
             }
         }
         private void vaccin(Citoyen c)
