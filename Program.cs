@@ -22,7 +22,7 @@ namespace Suivi_malade_corona
 
             Persistance p = new Persistance();
             Citoyen c = new Citoyen();
-            c.num_identite = "achraf12";
+            c.num_identite = "achraf12333";
             c.nom = "achraf";
            // p.AjoutCitoyen(c);
               Cas C1 = new Cas();

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
+using System.IO;
 
 namespace Suivi_malade_corona
 {
@@ -29,7 +29,6 @@ namespace Suivi_malade_corona
             string n = "achraf  ait mbarek est vaccine";
             var Data= QR.CreateQrCode(n, QRCoder.QRCodeGenerator.ECCLevel.H);
             var code = new QRCoder.QRCode(Data);
-            
             QrCode_Vaccin.Image = code.GetGraphic(50);
         }
 
@@ -37,5 +36,10 @@ namespace Suivi_malade_corona
         {
 
         }
+      
     }
-}
+    
+}  
+
+     
+
