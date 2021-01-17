@@ -15,7 +15,18 @@ namespace Suivi_malade_corona
         public string type_confi { get => Type_Confi; set => Type_Confi = value; }
         public string num_identite_citoyen { get => Num_Identite_citoyen; set => Num_Identite_citoyen = value; }
 
-        //  public void Confine(Citoyen C){ }
+          
+        public bool Confine(Citoyen c)//on retourne un un val de type bool on fait le traitement locale 
+        {
+            periode_confinement = (DateTime.Now.Day - c.cahier_medicale.date_prise_en_charge.Day);
+
+            if (DateTime.Now.Day - c.cahier_medicale.date_prise_en_charge.Day<15)
+            {
+                
+                return false;
+            }
+            return true;
+        }
 
     }
 }

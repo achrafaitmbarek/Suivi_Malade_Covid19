@@ -44,6 +44,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.4.1\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
@@ -68,7 +71,6 @@
       <DependentUpon>Cahier_Medicale_Citoyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Cas.cs" />
-    <Compile Include="CConfinement.cs" />
     <Compile Include="Citoyen.cs" />
     <Compile Include="CitoyenControl.cs">
       <SubType>UserControl</SubType>

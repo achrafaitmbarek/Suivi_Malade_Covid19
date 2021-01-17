@@ -9,7 +9,7 @@ namespace Suivi_malade_corona
 {
     static class Program
     {
-        public static string cnx_chaine = "Data Source=DESKTOP-FQACM7G;Initial Catalog=covid19management;Integrated Security=True";
+        public static string cnx_chaine = "Data Source=DESKTOP-GC79O37;Initial Catalog=covid19management;Integrated Security=True";
         static SqlConnection cnx = new SqlConnection(cnx_chaine);
         static SqlCommand command = new SqlCommand();
         static SqlDataAdapter adapter = new SqlDataAdapter(command);

@@ -33,7 +33,7 @@ namespace Suivi_malade_corona
         public string etat{get=>Etat; set=>Etat=value;}
         public string vaccine{ get=>Vaccine;set=>Vaccine=value;}
         public string nom{get=>Nom;set=>Nom=value;}
-        public string prenom {get =>Prenom;set=> prenom=value;}
+        public string prenom {get =>Prenom;set=> Prenom=value;}
         public int num_telephone{get=>Num_Telephone;set=> Num_Telephone=value;}
         public string num_identite{get =>Num_Identite;set=>Num_Identite=value;} 
         public string adresse{ get=>Adresse;set=>Adresse=value;}

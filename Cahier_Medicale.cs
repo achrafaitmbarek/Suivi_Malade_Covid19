@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Suivi_malade_corona
 {
+   
    public class Cahier_Medicale
     {
         private string Num_Identite;
@@ -18,7 +19,7 @@ namespace Suivi_malade_corona
         //accessors
         public bool immunodépression{get=>Immunodépression;set=>Immunodépression=value;}
 
-       public string num_identite{get=>Num_Identite;set=>Num_Identite=value;}
+        public string num_identite{get=>Num_Identite;set=>Num_Identite=value;}
 
         public string nom_docteur{ get => Nom_Docteur; set => Nom_Docteur = value;}
 
