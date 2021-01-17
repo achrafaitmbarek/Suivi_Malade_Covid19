@@ -116,6 +116,12 @@
     <Compile Include="Persistance.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vacciner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vacciner.Designer.cs">
+      <DependentUpon>Vacciner.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cahier_Medicale_Citoyen.resx">
       <DependentUpon>Cahier_Medicale_Citoyen.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +146,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vacciner.resx">
+      <DependentUpon>Vacciner.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

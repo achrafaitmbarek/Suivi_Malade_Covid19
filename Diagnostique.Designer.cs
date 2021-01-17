@@ -116,6 +116,7 @@ namespace Suivi_malade_corona
             this.Diagnostique_Button.TabIndex = 41;
             this.Diagnostique_Button.Text = "Diagnostiquer";
             this.Diagnostique_Button.UseVisualStyleBackColor = false;
+            this.Diagnostique_Button.Click += new System.EventHandler(this.Diagnostique_Button_Click);
             // 
             // checkBox_Non_sature
             // 
@@ -127,6 +128,7 @@ namespace Suivi_malade_corona
             this.checkBox_Non_sature.TabIndex = 52;
             this.checkBox_Non_sature.Text = "non-sature";
             this.checkBox_Non_sature.UseVisualStyleBackColor = true;
+            this.checkBox_Non_sature.CheckedChanged += new System.EventHandler(this.checkBox_Non_sature_CheckedChanged);
             // 
             // checkBox_Sature
             // 
@@ -138,6 +140,7 @@ namespace Suivi_malade_corona
             this.checkBox_Sature.TabIndex = 51;
             this.checkBox_Sature.Text = "sature";
             this.checkBox_Sature.UseVisualStyleBackColor = true;
+            this.checkBox_Sature.CheckedChanged += new System.EventHandler(this.checkBox_Sature_CheckedChanged);
             // 
             // checkBox_Normale
             // 
@@ -149,6 +152,7 @@ namespace Suivi_malade_corona
             this.checkBox_Normale.TabIndex = 50;
             this.checkBox_Normale.Text = "normale";
             this.checkBox_Normale.UseVisualStyleBackColor = true;
+            this.checkBox_Normale.CheckedChanged += new System.EventHandler(this.checkBox_Normale_CheckedChanged);
             // 
             // checkBox_Grave
             // 
@@ -160,6 +164,7 @@ namespace Suivi_malade_corona
             this.checkBox_Grave.TabIndex = 49;
             this.checkBox_Grave.Text = "grave";
             this.checkBox_Grave.UseVisualStyleBackColor = true;
+            this.checkBox_Grave.CheckedChanged += new System.EventHandler(this.checkBox_Grave_CheckedChanged);
             // 
             // Diagnostique
             // 

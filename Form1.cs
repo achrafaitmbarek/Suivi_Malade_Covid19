@@ -18,10 +18,7 @@ namespace Suivi_malade_corona
             InitializeComponent();
             Slide_Panel.Height = Citoyen_Button.Height;
             Slide_Panel.Top = Citoyen_Button.Top;
-            //citoyenControl1.BringToFront();
-            diagnostique1.BringToFront();
-            
-
+            citoyenControl1.BringToFront();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,6 +37,7 @@ namespace Suivi_malade_corona
             cahier_Medicale_Citoyen1.Hide();
             consulte_Etat1.Hide();
             citoyenControl1.Show();
+            diagnostique1.Hide();
             
         }
 
@@ -50,7 +48,8 @@ namespace Suivi_malade_corona
             citoyenControl1.Hide();
             consulte_Etat1.Hide();
             cahier_Medicale_Citoyen1.Show();
-            
+            diagnostique1.Hide();
+
         }
 
         private void Consultation_Etat_button_Click(object sender, EventArgs e)
@@ -60,6 +59,18 @@ namespace Suivi_malade_corona
             cahier_Medicale_Citoyen1.Hide();
             citoyenControl1.Hide();
             consulte_Etat1.Show();
+            diagnostique1.Hide();
+        }
+
+        private void button_Vaccin_Click(object sender, EventArgs e)
+        {
+            Slide_Panel.Height = Consultation_Etat_button.Height;
+            Slide_Panel.Top = Consultation_Etat_button.Top;
+            cahier_Medicale_Citoyen1.Hide();
+            citoyenControl1.Hide();
+            consulte_Etat1.Hide();
+            diagnostique1.Hide();
+            vacciner1.Show();
         }
     }
 }

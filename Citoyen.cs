@@ -64,6 +64,7 @@ namespace Suivi_malade_corona
             this.cahier_medicale=Cahier_Medicale;
             this.etat_clr=Etat_Clr;
             this.etat=Etat;
+        } 
         }
     }
-}
+

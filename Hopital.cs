@@ -9,22 +9,25 @@ namespace Suivi_malade_corona
 {
     public class Hopital
     {
-        public Hopital() {
+        public Hopital()
+        {
         }
-        public void Test_Pcr(Citoyen C,string test) {//"le test est positif ou negatif?
+        public void Test_Pcr(Citoyen C, string test)
+        {//"le test est positif ou negatif?
             if (test == "positif")
             {
                 C.etat_clr = "rouge";
                 C.test_result = "positif";
             }
-            else {
+            else
+            {
                 C.etat_clr = "orange";
                 C.test_result = "negatif";
-                
+
             }
         }
 
-        public string ECG(Citoyen c , string result)//Electro_Cardio_Gram
+        public string ECG(Citoyen c, string result)//Electro_Cardio_Gram
         {
 
             //"le resultat d'ECG est normale ou grave ");
@@ -37,7 +40,7 @@ namespace Suivi_malade_corona
         }
         public string SPO2(Citoyen c, string result)//La saturation pulsée en oxygène
         {
-          //"oxygen est sature ou non-sature ?");
+            //"oxygen est sature ou non-sature ?");
             while (result != "sature" || result != "non-sature")
             {
                 result = string.Empty;//"saisie non-valide! svp sature ou non-sature");
@@ -47,7 +50,7 @@ namespace Suivi_malade_corona
 
         public string Consultation_cahier(Citoyen c, string result)
         {
-           
+
             if (c.cahier_medicale.allergie == true || c.cahier_medicale.maladie_chronique == true)
             {
                 result = "grave";
@@ -65,7 +68,7 @@ namespace Suivi_malade_corona
             if (c.test_result == "positif") // si le citoyen est positif on lui fait le diagno
             {
                 c.score_diagnostique = 0;
-                if (Consultation_cahier(c,"") == "grave")
+                if (Consultation_cahier(c, "") == "grave")
                 {
                     c.score_diagnostique = 20;
                 }
@@ -84,32 +87,33 @@ namespace Suivi_malade_corona
         public void Test_Priorite_Vaccin(Citoyen C)////chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
         {
             C.score_vaccin = 0;
-            
+
             //Corps sanitaire ,le sujet ages ,L'immunodépression ,qui souffre de maladie chronique ,qui ont +18 
-            if (C.cahier_medicale.immunodépression == true) 
+            if (C.cahier_medicale.immunodépression == true)
             {
                 C.score_vaccin += 40;
             }
-            if (C.date_naissance.Year-DateTime.Now.Year<50) 
+            if (C.date_naissance.Year - DateTime.Now.Year < 50)
             {
-                C.score_vaccin +=15;
+                C.score_vaccin += 15;
             }
-            if (C.score_diagnostique<100)
+            if (C.score_diagnostique < 100)
             {
                 C.score_vaccin += 10;
             }
-            if (C.cahier_medicale.maladie_chronique==true)
+            if (C.cahier_medicale.maladie_chronique == true)
             {
-                C.score_vaccin +=20;
+                C.score_vaccin += 20;
             }
-            if (C.score_vaccin>50)
+            if (C.score_vaccin > 50)
             {
                 vaccin(C);
             }
         }
-        public void Faire_Vacccin(Citoyen c ,string vaccin_rep) {
+        public void Faire_Vacccin(Citoyen c, string vaccin_rep)
+        {
             //"vous avez vacciner ce citoyen ou vou voulez vacciner ce citoyen? (SVP reponds par oui ou non)"
-           if (vaccin_rep == "oui")
+            if (vaccin_rep == "oui")
             {
                 c.vaccine = "vaccine";
                 c.etat_clr = "vert";
@@ -124,6 +128,29 @@ namespace Suivi_malade_corona
         {
             c.etat_clr = "vert";
             c.vaccine = "vaccine";
+        }
+        public string ConsultationEtat(Citoyen c)
+        {
+            switch (c.etat)
+            {
+                case "gueri":
+                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " est d'etat gueri";
+                case "vif":
+                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + "est vif ";
+                case "grave":
+                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " a d'Etat Grave";
+                default:
+                    return null;
+            }
+            switch (c.vaccine)
+            {
+                case "vaccine":
+                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " est vacciné";
+                case "non-vaccine":
+                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " est vacciné";
+                default:
+                    return null;
+            }
         }
     }
 }
