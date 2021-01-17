@@ -100,11 +100,11 @@
     <Compile Include="Consulte_Etat.Designer.cs">
       <DependentUpon>Consulte_Etat.cs</DependentUpon>
     </Compile>
-    <Compile Include="DiagnostiqueS.cs">
+    <Compile Include="Diagnostique.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DiagnostiqueS.Designer.cs">
-      <DependentUpon>DiagnostiqueS.cs</DependentUpon>
+    <Compile Include="Diagnostique.Designer.cs">
+      <DependentUpon>Diagnostique.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -125,8 +125,8 @@
     <EmbeddedResource Include="Consulte_Etat.resx">
       <DependentUpon>Consulte_Etat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DiagnostiqueS.resx">
-      <DependentUpon>DiagnostiqueS.cs</DependentUpon>
+    <EmbeddedResource Include="Diagnostique.resx">
+      <DependentUpon>Diagnostique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

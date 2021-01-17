@@ -40,7 +40,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.Valider_Button = new System.Windows.Forms.Button();
+            this.Tester_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -163,28 +163,29 @@
             this.textBox6.Size = new System.Drawing.Size(132, 21);
             this.textBox6.TabIndex = 12;
             // 
-            // Valider_Button
+            // Tester_Button
             // 
-            this.Valider_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.Valider_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Valider_Button.FlatAppearance.BorderSize = 0;
-            this.Valider_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Valider_Button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Valider_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Valider_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Valider_Button.Location = new System.Drawing.Point(153, 376);
-            this.Valider_Button.Name = "Valider_Button";
-            this.Valider_Button.Size = new System.Drawing.Size(125, 49);
-            this.Valider_Button.TabIndex = 28;
-            this.Valider_Button.Text = "Valider";
-            this.Valider_Button.UseVisualStyleBackColor = false;
+            this.Tester_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.Tester_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Tester_Button.FlatAppearance.BorderSize = 0;
+            this.Tester_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Tester_Button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tester_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Tester_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Tester_Button.Location = new System.Drawing.Point(166, 356);
+            this.Tester_Button.Name = "Tester_Button";
+            this.Tester_Button.Size = new System.Drawing.Size(125, 49);
+            this.Tester_Button.TabIndex = 30;
+            this.Tester_Button.Text = "tester";
+            this.Tester_Button.UseVisualStyleBackColor = false;
+            this.Tester_Button.Click += new System.EventHandler(this.Tester_Button_Click);
             // 
             // CitoyenControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.Controls.Add(this.Valider_Button);
+            this.Controls.Add(this.Tester_Button);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -220,6 +221,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button Valider_Button;
+        private System.Windows.Forms.Button Tester_Button;
     }
 }
