@@ -35,27 +35,27 @@ namespace Suivi_malade_corona
         {
             Slide_Panel.Height = Citoyen_Button.Height;
             Slide_Panel.Top = Citoyen_Button.Top;
-            citoyenControl1.Show();
             cahier_Medicale_Citoyen1.Hide();
             consulte_Etat1.Hide();
+            citoyenControl1.Show();
         }
 
         private void Cahier_Medicale_button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Cahier_Medicale_button.Height;
             Slide_Panel.Top = Cahier_Medicale_button.Top;
-            cahier_Medicale_Citoyen1.Show();
             citoyenControl1.Hide();
             consulte_Etat1.Hide();
+            cahier_Medicale_Citoyen1.Show();
         }
 
         private void Consultation_Etat_button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Consultation_Etat_button.Height;
-            Slide_Panel.Top = Consultation_Etat_button.Top;
-            consulte_Etat1.Show();
+            Slide_Panel.Top    = Consultation_Etat_button.Top;
             cahier_Medicale_Citoyen1.Hide();
             citoyenControl1.Hide();
+            consulte_Etat1.Show();
         }
     }
 }

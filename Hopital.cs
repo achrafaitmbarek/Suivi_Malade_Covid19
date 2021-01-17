@@ -9,31 +9,13 @@ namespace Suivi_malade_corona
 {
     public class Hopital
     {
-        private string Nom;
-        private int Nbrs_Chambres;
-        private int Nbrs_Lits_Reanimation;
-        private int Nbrs_Chambres_Occupees;
-
-        public int nbrs_chambres_occupees { get => Nbrs_Chambres_Occupees; set => Nbrs_Chambres_Occupees = value; }
-
-        public int nbrs_chambres { get => Nbrs_Chambres; set => Nbrs_Chambres = value; }
-
-        public string nom { get => Nom; set => Nom = value; }
-
-        public int nbrs_lits_reanimation { get => Nbrs_Lits_Reanimation; set => Nbrs_Lits_Reanimation = value; }
-
         public Hopital() {
-            this.Nbrs_Chambres = 0;
-            this.Nbrs_Lits_Reanimation = 0;
-            this.Nom = string.Empty;
         }
-        public void Test_Pcr(Citoyen C) {
-            string test = string.Empty;//"le test est positif ou negatif?
+        public void Test_Pcr(Citoyen C,string test) {//"le test est positif ou negatif?
             if (test == "positif")
             {
                 C.etat_clr = "rouge";
                 C.test_result = "positif";
-                
             }
             else {
                 C.etat_clr = "orange";
@@ -77,7 +59,7 @@ namespace Suivi_malade_corona
             return result;
         }
 
-        public void Diagnostique(Citoyen c)//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
+        public int Diagnostique(Citoyen c)//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
         {
 
             if (c.test_result == "positif") // si le citoyen est positif on lui fait le diagno
@@ -96,6 +78,7 @@ namespace Suivi_malade_corona
                     c.score_diagnostique += 40;
                 }
             }
+            return c.score_diagnostique;
         }
 
         public void Test_Priorite_Vaccin(Citoyen C)////chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
@@ -125,7 +108,7 @@ namespace Suivi_malade_corona
             }
         }
         public void Faire_Vacccin(Citoyen c ,string vaccin_rep) {
-            //"vous avez vacciner ce citoyen? (SVP reponds par oui ou non)"
+            //"vous avez vacciner ce citoyen ou vou voulez vacciner ce citoyen? (SVP reponds par oui ou non)"
            if (vaccin_rep == "oui")
             {
                 c.vaccine = "vaccine";

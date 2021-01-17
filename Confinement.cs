@@ -16,17 +16,27 @@ namespace Suivi_malade_corona
         public string num_identite_citoyen { get => Num_Identite_citoyen; set => Num_Identite_citoyen = value; }
 
           
-        public bool Confine(Citoyen c)//on retourne un un val de type bool on fait le traitement locale 
+        public bool Confine_Consulte(Citoyen c)//on retourne un un val de type bool on fait le traitement locale 
         {
             periode_confinement = (DateTime.Now.Day - c.cahier_medicale.date_prise_en_charge.Day);
 
             if (DateTime.Now.Day - c.cahier_medicale.date_prise_en_charge.Day<15)
             {
-                
                 return false;
             }
             return true;
         }
-
+        public void TypeConfin(Citoyen c,Hopital h)
+        {
+            if (h.Diagnostique(c)<100)
+            {
+                this.type_confi = "A domicile";
+                c.statut = "A domicile";
+            }
+            else {
+                this.type_confi = "Prise En Charge";
+                c.statut = "Prise En Charge";
+            }
+        }
     }
 }

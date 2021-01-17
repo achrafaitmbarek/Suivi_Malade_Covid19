@@ -18,11 +18,13 @@
             static SqlConnection cnx = new SqlConnection(cnx_chaine);
             static SqlCommand command = new SqlCommand();
             static SqlDataAdapter adapter = new SqlDataAdapter(command);
+            
             public Persistance(){}
             public static void Ajout_Nouveau_Cas(Citoyen C)//Ici on va faire l'ajout des cas +le test avant d les ajouter si positif =>cas positif ..........
             {
                try 
-	          {	        
+	          {	       
+               
 		         cnx.Open();
 	           }
 	         catch (Exception ex)
@@ -43,9 +45,9 @@
         {
             cnx.Open();
             command.Connection = cnx;
-            command.CommandText = "insert into Citoyen(Num_Identite,Nom,Prenom,Num_Telephone,Etat,Adresse,Sexe,Test_Result,Etat_Clr,Vaccine,Statut,Score_Vaccin,Score_Diagnostique) values('"
-            + c.num_identite+ "','" + c.nom+ "','" + c.num_telephone + "','" + c.etat + "','" + c.adresse + "','" + c.sexe +
-            "','"+c.vaccine+"','"+c.statut+"','"+c.score_vaccin+"','"+c.score_diagnostique+"')";
+            command.CommandText = "insert into Citoyen(Num_Identite,Nom,Prenom,Num_Telephone,Etat,Adresse,Sexe,Test_Result,Etat_Clr,Vaccine,Statut) values('"
+            + c.num_identite+ "','" + c.nom+ "','" + c.prenom + "','" + c.num_telephone + "','" + c.etat + "','" + c.adresse + "','" + c.sexe + "','"+c.test_result+ "','"+c.etat_clr+
+            "','" +c.vaccine+"','"+c.statut+"')";
             if (c.test_result=="positif")
 	        {
                 command.CommandText = "update Cas set Cas_Confirmes=Cas_Confirmes+1";
