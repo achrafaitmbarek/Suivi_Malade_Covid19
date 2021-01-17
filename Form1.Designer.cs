@@ -78,7 +78,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 521);
@@ -160,9 +160,8 @@
             this.consulte_Etat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.consulte_Etat1.Location = new System.Drawing.Point(249, 68);
             this.consulte_Etat1.Name = "consulte_Etat1";
-            this.consulte_Etat1.Size = new System.Drawing.Size(624, 508);
+            this.consulte_Etat1.Size = new System.Drawing.Size(510, 508);
             this.consulte_Etat1.TabIndex = 4;
-      
             // 
             // Form1
             // 

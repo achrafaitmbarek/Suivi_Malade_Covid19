@@ -19,15 +19,11 @@ namespace Suivi_malade_corona
             Slide_Panel.Height = Citoyen_Button.Height;
             Slide_Panel.Top = Citoyen_Button.Top;
             citoyenControl1.BringToFront();
-            
-           }
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Citoyen c = new Citoyen();
-            Hopital h = new Hopital();
-            consulte_Etat1.Text ="12";
-            h.Faire_Vacccin(c,consulte_Etat1.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -39,21 +35,27 @@ namespace Suivi_malade_corona
         {
             Slide_Panel.Height = Citoyen_Button.Height;
             Slide_Panel.Top = Citoyen_Button.Top;
-           citoyenControl1.BringToFront();
+            citoyenControl1.Show();
+            cahier_Medicale_Citoyen1.Hide();
+            consulte_Etat1.Hide();
         }
 
         private void Cahier_Medicale_button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Cahier_Medicale_button.Height;
             Slide_Panel.Top = Cahier_Medicale_button.Top;
-            cahier_Medicale_Citoyen1.BringToFront();
+            cahier_Medicale_Citoyen1.Show();
+            citoyenControl1.Hide();
+            consulte_Etat1.Hide();
         }
 
         private void Consultation_Etat_button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Consultation_Etat_button.Height;
             Slide_Panel.Top = Consultation_Etat_button.Top;
-            consulte_Etat1.BringToFront();
+            consulte_Etat1.Show();
+            cahier_Medicale_Citoyen1.Hide();
+            citoyenControl1.Hide();
         }
     }
 }

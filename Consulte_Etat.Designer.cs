@@ -41,6 +41,8 @@
             this.label_Etat = new System.Windows.Forms.Label();
             this.label_Confinement = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.QrCode_Vaccin = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.QrCode_Vaccin)).BeginInit();
             this.SuspendLayout();
             // 
             // Consulter_Button
@@ -122,7 +124,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(26, 327);
+            this.label5.Location = new System.Drawing.Point(26, 379);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 43;
@@ -134,7 +136,7 @@
             this.label_Vaccine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label_Vaccine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Vaccine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_Vaccine.Location = new System.Drawing.Point(169, 327);
+            this.label_Vaccine.Location = new System.Drawing.Point(169, 379);
             this.label_Vaccine.Name = "label_Vaccine";
             this.label_Vaccine.Size = new System.Drawing.Size(0, 15);
             this.label_Vaccine.TabIndex = 47;
@@ -178,7 +180,7 @@
             this.label_Confinement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label_Confinement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Confinement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_Confinement.Location = new System.Drawing.Point(169, 372);
+            this.label_Confinement.Location = new System.Drawing.Point(169, 332);
             this.label_Confinement.Name = "label_Confinement";
             this.label_Confinement.Size = new System.Drawing.Size(0, 15);
             this.label_Confinement.TabIndex = 49;
@@ -189,17 +191,27 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(26, 372);
+            this.label6.Location = new System.Drawing.Point(26, 332);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 15);
             this.label6.TabIndex = 50;
             this.label6.Text = "Confinement";
+            // 
+            // QrCode_Vaccin
+            // 
+            this.QrCode_Vaccin.Location = new System.Drawing.Point(132, 408);
+            this.QrCode_Vaccin.Name = "QrCode_Vaccin";
+            this.QrCode_Vaccin.Size = new System.Drawing.Size(100, 82);
+            this.QrCode_Vaccin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.QrCode_Vaccin.TabIndex = 51;
+            this.QrCode_Vaccin.TabStop = false;
             // 
             // Consulte_Etat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.QrCode_Vaccin);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label_Confinement);
             this.Controls.Add(this.label_Vaccine);
@@ -215,6 +227,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Consulte_Etat";
             this.Size = new System.Drawing.Size(637, 564);
+            this.Load += new System.EventHandler(this.Consulte_Etat_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.QrCode_Vaccin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +249,6 @@
         private System.Windows.Forms.Label label_Etat;
         private System.Windows.Forms.Label label_Confinement;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox QrCode_Vaccin;
     }
 }

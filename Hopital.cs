@@ -33,19 +33,19 @@ namespace Suivi_malade_corona
             {
                 C.etat_clr = "rouge";
                 C.test_result = "positif";
-                // this.Ministre.cas.cas_actifs=;
+                
             }
             else {
                 C.etat_clr = "orange";
                 C.test_result = "negatif";
-                //this.Ministre.cas.cas_exclus++;
+                
             }
         }
-        
-        public string ECG(Citoyen c)//Electro_Cardio_Gram
+
+        public string ECG(Citoyen c , string result)//Electro_Cardio_Gram
         {
 
-            string result = string.Empty;//"le resultat d'ECG est normale ou grave ");
+            //"le resultat d'ECG est normale ou grave ");
 
             while (result != "grave" || result != "normale")
             {
@@ -53,9 +53,9 @@ namespace Suivi_malade_corona
             }
             return result;
         }
-        public string SPO2(Citoyen c)//La saturation pulsée en oxygène
+        public string SPO2(Citoyen c, string result)//La saturation pulsée en oxygène
         {
-            string result = string.Empty;//"oxygen est sature ou non-sature ?");
+          //"oxygen est sature ou non-sature ?");
             while (result != "sature" || result != "non-sature")
             {
                 result = string.Empty;//"saisie non-valide! svp sature ou non-sature");
@@ -63,14 +63,14 @@ namespace Suivi_malade_corona
             return result;
         }
 
-        public string Consultation_cahier(Citoyen c)
+        public string Consultation_cahier(Citoyen c, string result)
         {
-            string result = string.Empty;
+           
             if (c.cahier_medicale.allergie == true || c.cahier_medicale.maladie_chronique == true)
             {
                 result = "grave";
             }
-            else if (c.cahier_medicale.allergie != true || c.cahier_medicale.maladie_chronique != true)
+            else if (c.cahier_medicale.allergie != true && c.cahier_medicale.maladie_chronique != true)
             {
                 result = "normal";
             }
@@ -83,15 +83,15 @@ namespace Suivi_malade_corona
             if (c.test_result == "positif") // si le citoyen est positif on lui fait le diagno
             {
                 c.score_diagnostique = 0;
-                if (Consultation_cahier(c) == "grave")
+                if (Consultation_cahier(c,"") == "grave")
                 {
                     c.score_diagnostique = 20;
                 }
-                if (SPO2(c) == "non-sature")
+                if (SPO2(c, "") == "non-sature")
                 {
                     c.score_diagnostique += 40;
                 }
-                if (ECG(c) == "grave")
+                if (ECG(c, "") == "grave")
                 {
                     c.score_diagnostique += 40;
                 }

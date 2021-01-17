@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace Suivi_malade_corona
 {
+    
+      
     public partial class CitoyenControl : UserControl
     {
+       
         public CitoyenControl()
         {
             InitializeComponent();
