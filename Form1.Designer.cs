@@ -36,9 +36,10 @@
             this.Cahier_Medicale_button = new System.Windows.Forms.Button();
             this.Citoyen_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.diagnostique1 = new Suivi_malade_corona.Diagnostique();
+            this.consulte_Etat1 = new Suivi_malade_corona.Consulte_Etat();
             this.cahier_Medicale_Citoyen1 = new Suivi_malade_corona.Cahier_Medicale_Citoyen();
             this.citoyenControl1 = new Suivi_malade_corona.CitoyenControl();
-            this.consulte_Etat1 = new Suivi_malade_corona.Consulte_Etat();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +139,22 @@
             this.panel2.Size = new System.Drawing.Size(1010, 10);
             this.panel2.TabIndex = 1;
             // 
+            // diagnostique1
+            // 
+            this.diagnostique1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.diagnostique1.Location = new System.Drawing.Point(797, 12);
+            this.diagnostique1.Name = "diagnostique1";
+            this.diagnostique1.Size = new System.Drawing.Size(462, 446);
+            this.diagnostique1.TabIndex = 5;
+            // 
+            // consulte_Etat1
+            // 
+            this.consulte_Etat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.consulte_Etat1.Location = new System.Drawing.Point(249, 68);
+            this.consulte_Etat1.Name = "consulte_Etat1";
+            this.consulte_Etat1.Size = new System.Drawing.Size(510, 508);
+            this.consulte_Etat1.TabIndex = 4;
+            // 
             // cahier_Medicale_Citoyen1
             // 
             this.cahier_Medicale_Citoyen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
@@ -155,19 +172,12 @@
             this.citoyenControl1.Size = new System.Drawing.Size(624, 508);
             this.citoyenControl1.TabIndex = 2;
             // 
-            // consulte_Etat1
-            // 
-            this.consulte_Etat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.consulte_Etat1.Location = new System.Drawing.Point(249, 68);
-            this.consulte_Etat1.Name = "consulte_Etat1";
-            this.consulte_Etat1.Size = new System.Drawing.Size(510, 508);
-            this.consulte_Etat1.TabIndex = 4;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 576);
+            this.Controls.Add(this.diagnostique1);
             this.Controls.Add(this.consulte_Etat1);
             this.Controls.Add(this.cahier_Medicale_Citoyen1);
             this.Controls.Add(this.citoyenControl1);
@@ -196,6 +206,7 @@
         private Cahier_Medicale_Citoyen cahier_Medicale_Citoyen1;
         private Consulte_Etat consulte_Etat1;
         private System.Windows.Forms.Button Consultation_Etat_button;
+        private Diagnostique diagnostique1;
     }
 }
 
