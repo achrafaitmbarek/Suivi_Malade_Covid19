@@ -15,11 +15,12 @@ namespace Suivi_malade_corona
        
         private static Citoyen CITOYEN=new Citoyen();
         private static Hopital HOPITAL=new Hopital(CITOYEN);
-        private static Persistance Persist = new Persistance();
-        private static Persistance PERSISTANCE = new Persistance();
+        private static Cahier_Medicale Cahier_Medicale = new Cahier_Medicale();
+        private static Persistance PERSISTANCE = new Persistance(CITOYEN,Cahier_Medicale);
         public static Citoyen citoyen { get => CITOYEN; set => CITOYEN = value; }
         public static Hopital hopital { get => HOPITAL; set => HOPITAL = value; }
         public static Persistance persistance { get => PERSISTANCE; set => PERSISTANCE = value; }
+        public static Cahier_Medicale cahier_medicale { get => Cahier_Medicale; set => cahier_medicale = value; }
         public Form1()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace Suivi_malade_corona
             diagnostique1.Hide();
         }
 
-        private void Cahier_Medicale_button_Click(object sender, EventArgs e)
+      /*  private void Cahier_Medicale_button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Cahier_Medicale_button.Height;
             Slide_Panel.Top = Cahier_Medicale_button.Top;
@@ -61,9 +62,8 @@ namespace Suivi_malade_corona
             cahier_Medicale_Citoyen1.Show();
             cahier_Medicale_Citoyen1.BringToFront();
             diagnostique1.Hide();
-
         }
-
+*/
         private void Consultation_Etat_button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Consultation_Etat_button.Height;
@@ -90,6 +90,12 @@ namespace Suivi_malade_corona
         private void button1_Click(object sender, EventArgs e)
         {
            //MessageBox.Show(""+citoyen.nom+" "+citoyen.prenom+" son NUM ID "+citoyen.num_identite+"tele"+citoyen.num_telephone+" sa date de naissance "+citoyen.date_naissance);
+        }
+
+        private void button_Enregistrer_Click(object sender, EventArgs e)
+        {
+            persistance.AjoutCitoyen();
+            MessageBox.Show(citoyen.nom);
         }
     }
 }

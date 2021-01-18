@@ -42,6 +42,8 @@
             this.checkBox_Feminin = new System.Windows.Forms.CheckBox();
             this.checkBox_Masculin = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox_Num_Identite = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -196,11 +198,33 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 51;
             // 
+            // textBox_Num_Identite
+            // 
+            this.textBox_Num_Identite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Num_Identite.Location = new System.Drawing.Point(238, 47);
+            this.textBox_Num_Identite.Name = "textBox_Num_Identite";
+            this.textBox_Num_Identite.Size = new System.Drawing.Size(132, 21);
+            this.textBox_Num_Identite.TabIndex = 53;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(41, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 15);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Num Identite";
+            // 
             // CitoyenControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.textBox_Num_Identite);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.checkBox_Feminin);
             this.Controls.Add(this.checkBox_Masculin);
@@ -240,5 +264,7 @@
         private System.Windows.Forms.CheckBox checkBox_Feminin;
         private System.Windows.Forms.CheckBox checkBox_Masculin;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox_Num_Identite;
+        private System.Windows.Forms.Label label7;
     }
 }
