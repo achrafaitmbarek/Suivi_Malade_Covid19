@@ -107,14 +107,14 @@ namespace Suivi_malade_corona
             this.Diagnostique_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Diagnostique_Button.FlatAppearance.BorderSize = 0;
             this.Diagnostique_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Diagnostique_Button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Diagnostique_Button.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Diagnostique_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Diagnostique_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Diagnostique_Button.Location = new System.Drawing.Point(99, 160);
+            this.Diagnostique_Button.Location = new System.Drawing.Point(212, 150);
             this.Diagnostique_Button.Name = "Diagnostique_Button";
-            this.Diagnostique_Button.Size = new System.Drawing.Size(167, 58);
+            this.Diagnostique_Button.Size = new System.Drawing.Size(129, 53);
             this.Diagnostique_Button.TabIndex = 41;
-            this.Diagnostique_Button.Text = "Diagnostiquer";
+            this.Diagnostique_Button.Text = "Remplir Cahier medicale";
             this.Diagnostique_Button.UseVisualStyleBackColor = false;
             this.Diagnostique_Button.Click += new System.EventHandler(this.Diagnostique_Button_Click);
             // 

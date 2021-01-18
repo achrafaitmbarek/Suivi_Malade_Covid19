@@ -9,10 +9,17 @@ namespace Suivi_malade_corona
 {
     public class Hopital
     {
+        private Citoyen Citoyen;
+        public Citoyen C { get => Citoyen; set => Citoyen = value; }
+
+        public Hopital(Citoyen C)
+        {
+            this.Citoyen = C;
+        }
         public Hopital()
         {
         }
-        public void Test_Pcr(Citoyen C, string test)
+        public void Test_Pcr( string test)
         {//"le test est positif ou negatif?
             if (test == "positif")
             {
@@ -26,62 +33,45 @@ namespace Suivi_malade_corona
 
             }
         }
+        private string EECCGG;
+        private string SSPPOO22;
+        private string CONSULTE_CAHIER;
+        public string eeccgg { get => EECCGG; set => EECCGG = value; }
+        public string ssppoo2 { get => SSPPOO22; set => SSPPOO22 = value; }
+        public string consulte_cahier { get => CONSULTE_CAHIER; set =>  CONSULTE_CAHIER= value; }
 
-        public string ECG(Citoyen c, string result)//Electro_Cardio_Gram
+        private void Consultation_cahier()
         {
-
-            //"le resultat d'ECG est normale ou grave ");
-
-            while (result != "grave" || result != "normale")
+            if (C.cahier_medicale.allergie == true || C.cahier_medicale.maladie_chronique == true)
             {
-                result = string.Empty;//"saisie non-valide! svp noramle ou grave");
+                consulte_cahier = "grave";
             }
-            return result;
-        }
-        public string SPO2(Citoyen c, string result)//La saturation pulsée en oxygène
-        {
-            //"oxygen est sature ou non-sature ?");
-            while (result != "sature" || result != "non-sature")
+            else if (C.cahier_medicale.allergie != true && C.cahier_medicale.maladie_chronique != true)
             {
-                result = string.Empty;//"saisie non-valide! svp sature ou non-sature");
+                consulte_cahier = "normal";
             }
-            return result;
         }
 
-        public string Consultation_cahier(Citoyen c, string result)
+        public int Diagnostique()//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
         {
 
-            if (c.cahier_medicale.allergie == true || c.cahier_medicale.maladie_chronique == true)
+            if (C.test_result == "positif") // si le citoyen est positif on lui fait le diagno
             {
-                result = "grave";
-            }
-            else if (c.cahier_medicale.allergie != true && c.cahier_medicale.maladie_chronique != true)
-            {
-                result = "normal";
-            }
-            return result;
-        }
-
-        public int Diagnostique(Citoyen c)//chaque Cas positif a un score Attribue pour decider s'il va etre confine au sein de l'hopital au bien chez lui a la maison  
-        {
-
-            if (c.test_result == "positif") // si le citoyen est positif on lui fait le diagno
-            {
-                c.score_diagnostique = 0;
-                if (Consultation_cahier(c, "") == "grave")
+                C.score_diagnostique = 0;
+                if (consulte_cahier == "grave")
                 {
-                    c.score_diagnostique = 20;
+                    C.score_diagnostique = 20;
                 }
-                if (SPO2(c, "") == "non-sature")
+                if (ssppoo2 == "non-sature")
                 {
-                    c.score_diagnostique += 40;
+                    C.score_diagnostique += 40;
                 }
-                if (ECG(c, "") == "grave")
+                if (EECCGG == "grave")
                 {
-                    c.score_diagnostique += 40;
+                    C.score_diagnostique += 40;
                 }
             }
-            return c.score_diagnostique;
+            return C.score_diagnostique;
         }
 
         public void Test_Priorite_Vaccin(Citoyen C)////chaque Citoyen a un score Attribue pour decide par ordre de priorite qui va prendre le vaccin 
@@ -142,7 +132,7 @@ namespace Suivi_malade_corona
                 default:
                     return null;
             }
-            switch (c.vaccine)
+           switch (c.vaccine)
             {
                 case "vaccine":
                     return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " est vacciné";

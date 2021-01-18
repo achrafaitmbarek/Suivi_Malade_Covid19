@@ -12,11 +12,11 @@ namespace Suivi_malade_corona
 {
     public partial class Diagnostique : UserControl
     {
-        Citoyen c = new Citoyen();
+        
         public Diagnostique()
         {
-           
             InitializeComponent();
+            Diagnostique_Button.Hide();
         }
 
         private void Diagnostique_Load(object sender, EventArgs e)
@@ -28,8 +28,14 @@ namespace Suivi_malade_corona
         {
             if (checkBox_Negatif.Checked)
             {
-              checkBox_Positif.CheckState=CheckState.Unchecked;
+                   checkBox_Positif.CheckState=CheckState.Unchecked;
+                    checkBox_Non_sature.Hide();
+                    checkBox_Grave.Hide();
+                    checkBox_Normale.Hide();
+                    checkBox_Sature.Hide();
+                    Diagnostique_Button.Hide();
             }
+
             
         }
 
@@ -39,6 +45,19 @@ namespace Suivi_malade_corona
             if (checkBox_Positif.Checked)
             {
                 checkBox_Negatif.CheckState = CheckState.Unchecked;
+                checkBox_Non_sature.CheckState=CheckState.Unchecked;
+                checkBox_Grave.CheckState = CheckState.Unchecked;
+                checkBox_Normale.CheckState = CheckState.Unchecked;
+                checkBox_Sature.CheckState = CheckState.Unchecked;
+                checkBox_Non_sature.Show();
+                checkBox_Grave.Show();
+                checkBox_Normale.Show();
+                checkBox_Sature.Show();
+                Diagnostique_Button.Show();
+            }
+            if (!checkBox_Positif.Checked)
+            {
+                Diagnostique_Button.Hide();
             }
         }
 
@@ -76,7 +95,9 @@ namespace Suivi_malade_corona
 
         private void Diagnostique_Button_Click(object sender, EventArgs e)
         {
-           
+            Cahier_Medicale_Citoyen cahier = new Cahier_Medicale_Citoyen();
+            this.Controls.Add(cahier);
+            cahier.BringToFront();
         }
     }
 }

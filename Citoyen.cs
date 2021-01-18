@@ -51,10 +51,10 @@ namespace Suivi_malade_corona
         public string etat_clr{get=>Etat_Clr;set=>Etat_Clr=value;}
         ////constructeur
         public Citoyen(){
-             this.Etat_Clr="orange";
+            // this.Etat_Clr="orange";
             //this.Vaccine="non vaccine";
         }
-        public Citoyen( string Nom, string Prenom, int Num_Telephone,string Num_Identite, string Adresse, string Sexe/*, Cahier_Medicale Cahier_Medicale*/, string Etat_Clr,string Etat)
+        public Citoyen( string Nom, string Prenom, int Num_Telephone,string Num_Identite, string Adresse, string Sexe, Cahier_Medicale Cahier_Medicale, string Etat_Clr,string Etat)
         {
             this.nom=Nom;
             this.prenom=Prenom;
@@ -65,6 +65,10 @@ namespace Suivi_malade_corona
             this.etat_clr=Etat_Clr;
             this.etat=Etat;
         } 
+        public Citoyen(string c)
+        {
+            this.nom = c;
+        }
         }
     }
 

@@ -18,10 +18,12 @@ namespace Suivi_malade_corona
         private static SqlConnection cnx = new SqlConnection(cnx_chaine);
         private static SqlCommand command = new SqlCommand();
         private static SqlDataAdapter adapter = new SqlDataAdapter(command);
+        
         public Vacciner()
         {
             InitializeComponent();
             Vacciner_Btn.Enabled = false;
+            
 
         }
 
@@ -29,22 +31,15 @@ namespace Suivi_malade_corona
         {
             cnx.Open();
             command.Connection = cnx;
-            if (checkBox_Vaccine_Non.CheckState==CheckState.Checked)
-            {
-                command.CommandText = "update Citoyen set Vaccine='Non Vaccine' where Num_Identite='" + textBox1+"'";
-            }
-            else
-            {
-                command.CommandText = "update Citoyen set Vaccine='Vaccine' where Num_Identite='" + textBox1 + "'";
-            }
-
+           // command.CommandText = "delete from Citoyen where Num_Identite='achraf12'";
+            command.CommandText = "update Citoyen set Vaccine='Non Vaccine' where Num_Identite='achraf'";
             command.ExecuteNonQuery();
             cnx.Close();
+            MessageBox.Show("makyensgh mushkil");
         }
 
         private void Vacciner_Load(object sender, EventArgs e)
         {
-       
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -74,8 +69,6 @@ namespace Suivi_malade_corona
             {
                 checkBox_Vaccine_Non.CheckState = CheckState.Unchecked;
             }
-            
-            
         }
     }
 }

@@ -34,13 +34,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox_Nom = new System.Windows.Forms.TextBox();
+            this.textBox_Prenom = new System.Windows.Forms.TextBox();
+            this.textBox_Num_Telephone = new System.Windows.Forms.TextBox();
+            this.textBox_Adresse = new System.Windows.Forms.TextBox();
             this.Tester_Button = new System.Windows.Forms.Button();
+            this.checkBox_Feminin = new System.Windows.Forms.CheckBox();
+            this.checkBox_Masculin = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -115,53 +116,37 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Date_Naissance";
             // 
-            // textBox1
+            // textBox_Nom
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.Location = new System.Drawing.Point(238, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 21);
-            this.textBox1.TabIndex = 7;
+            this.textBox_Nom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Nom.Location = new System.Drawing.Point(238, 90);
+            this.textBox_Nom.Name = "textBox_Nom";
+            this.textBox_Nom.Size = new System.Drawing.Size(132, 21);
+            this.textBox_Nom.TabIndex = 7;
             // 
-            // textBox2
+            // textBox_Prenom
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.Location = new System.Drawing.Point(238, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 21);
-            this.textBox2.TabIndex = 8;
+            this.textBox_Prenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Prenom.Location = new System.Drawing.Point(238, 133);
+            this.textBox_Prenom.Name = "textBox_Prenom";
+            this.textBox_Prenom.Size = new System.Drawing.Size(132, 21);
+            this.textBox_Prenom.TabIndex = 8;
             // 
-            // textBox3
+            // textBox_Num_Telephone
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox3.Location = new System.Drawing.Point(238, 177);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 21);
-            this.textBox3.TabIndex = 9;
+            this.textBox_Num_Telephone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Num_Telephone.Location = new System.Drawing.Point(238, 177);
+            this.textBox_Num_Telephone.Name = "textBox_Num_Telephone";
+            this.textBox_Num_Telephone.Size = new System.Drawing.Size(132, 21);
+            this.textBox_Num_Telephone.TabIndex = 9;
             // 
-            // textBox4
+            // textBox_Adresse
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox4.Location = new System.Drawing.Point(238, 231);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 21);
-            this.textBox4.TabIndex = 10;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox5.Location = new System.Drawing.Point(238, 277);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 21);
-            this.textBox5.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox6.Location = new System.Drawing.Point(238, 318);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 21);
-            this.textBox6.TabIndex = 12;
+            this.textBox_Adresse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Adresse.Location = new System.Drawing.Point(238, 231);
+            this.textBox_Adresse.Name = "textBox_Adresse";
+            this.textBox_Adresse.Size = new System.Drawing.Size(132, 21);
+            this.textBox_Adresse.TabIndex = 10;
             // 
             // Tester_Button
             // 
@@ -180,18 +165,50 @@
             this.Tester_Button.UseVisualStyleBackColor = false;
             this.Tester_Button.Click += new System.EventHandler(this.Tester_Button_Click);
             // 
+            // checkBox_Feminin
+            // 
+            this.checkBox_Feminin.AutoSize = true;
+            this.checkBox_Feminin.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox_Feminin.Location = new System.Drawing.Point(335, 273);
+            this.checkBox_Feminin.Name = "checkBox_Feminin";
+            this.checkBox_Feminin.Size = new System.Drawing.Size(78, 19);
+            this.checkBox_Feminin.TabIndex = 50;
+            this.checkBox_Feminin.Text = "Feminin";
+            this.checkBox_Feminin.UseVisualStyleBackColor = true;
+            this.checkBox_Feminin.CheckedChanged += new System.EventHandler(this.checkBox_Feminin_CheckedChanged);
+            // 
+            // checkBox_Masculin
+            // 
+            this.checkBox_Masculin.AutoSize = true;
+            this.checkBox_Masculin.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox_Masculin.Location = new System.Drawing.Point(237, 273);
+            this.checkBox_Masculin.Name = "checkBox_Masculin";
+            this.checkBox_Masculin.Size = new System.Drawing.Size(84, 19);
+            this.checkBox_Masculin.TabIndex = 49;
+            this.checkBox_Masculin.Text = "Masculin";
+            this.checkBox_Masculin.UseVisualStyleBackColor = true;
+            this.checkBox_Masculin.CheckedChanged += new System.EventHandler(this.checkBox_Masculin_CheckedChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(237, 318);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.TabIndex = 51;
+            // 
             // CitoyenControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.checkBox_Feminin);
+            this.Controls.Add(this.checkBox_Masculin);
             this.Controls.Add(this.Tester_Button);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Adresse);
+            this.Controls.Add(this.textBox_Num_Telephone);
+            this.Controls.Add(this.textBox_Prenom);
+            this.Controls.Add(this.textBox_Nom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -215,12 +232,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox_Nom;
+        private System.Windows.Forms.TextBox textBox_Prenom;
+        private System.Windows.Forms.TextBox textBox_Num_Telephone;
+        private System.Windows.Forms.TextBox textBox_Adresse;
         private System.Windows.Forms.Button Tester_Button;
+        private System.Windows.Forms.CheckBox checkBox_Feminin;
+        private System.Windows.Forms.CheckBox checkBox_Masculin;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

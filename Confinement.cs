@@ -28,7 +28,7 @@ namespace Suivi_malade_corona
         }
         public void TypeConfin(Citoyen c,Hopital h)
         {
-            if (h.Diagnostique(c)<100)
+            if (h.Diagnostique()<100)
             {
                 this.type_confi = "A domicile";
                 c.statut = "A domicile";
