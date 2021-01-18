@@ -182,7 +182,7 @@ namespace Suivi_malade_corona
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Diagnostique";
-            this.Size = new System.Drawing.Size(462, 446);
+            this.Size = new System.Drawing.Size(495, 509);
             this.Load += new System.EventHandler(this.Diagnostique_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

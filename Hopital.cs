@@ -100,18 +100,18 @@ namespace Suivi_malade_corona
                 vaccin(C);
             }
         }
-        public void Faire_Vacccin(Citoyen c, string vaccin_rep)
+        public void Faire_Vacccin(string vaccin_rep)
         {
             //"vous avez vacciner ce citoyen ou vou voulez vacciner ce citoyen? (SVP reponds par oui ou non)"
             if (vaccin_rep == "oui")
             {
-                c.vaccine = "vaccine";
-                c.etat_clr = "vert";
+                C.vaccine = "vaccine";
+                C.etat_clr = "vert";
             }
             else
             {
-                c.vaccine = "non vaccine";
-                c.etat_clr = "orange";
+                C.vaccine = "non vaccine";
+                C.etat_clr = "orange";
             }
         }
         private void vaccin(Citoyen c)
@@ -119,28 +119,6 @@ namespace Suivi_malade_corona
             c.etat_clr = "vert";
             c.vaccine = "vaccine";
         }
-        public string ConsultationEtat(Citoyen c)
-        {
-            switch (c.etat)
-            {
-                case "gueri":
-                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " est d'etat gueri";
-                case "vif":
-                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + "est vif ";
-                case "grave":
-                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " a d'Etat Grave";
-                default:
-                    return null;
-            }
-           switch (c.vaccine)
-            {
-                case "vaccine":
-                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " est vacciné";
-                case "non-vaccine":
-                    return "Citoyen " + c.prenom + " " + c.nom + " avec CIN: " + c.num_identite + " est vacciné";
-                default:
-                    return null;
-            }
-        }
+        
     }
 }

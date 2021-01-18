@@ -19,10 +19,7 @@ namespace Suivi_malade_corona
             Diagnostique_Button.Hide();
         }
 
-        private void Diagnostique_Load(object sender, EventArgs e)
-        {
-            
-        }
+        private void Diagnostique_Load(object sender, EventArgs e){}
 
         private void checkBox_Negatif_CheckedChanged(object sender, EventArgs e)
         {
@@ -35,8 +32,6 @@ namespace Suivi_malade_corona
                     checkBox_Sature.Hide();
                     Diagnostique_Button.Hide();
             }
-
-            
         }
 
         private void checkBox_Positif_CheckedChanged(object sender, EventArgs e)

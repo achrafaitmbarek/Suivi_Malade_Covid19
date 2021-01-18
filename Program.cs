@@ -20,13 +20,7 @@ namespace Suivi_malade_corona
         [STAThread]
         static void Main()
         {
-            cnx.Open();
-            command.Connection = cnx;
-            command.CommandText = "delete from Citoyen where Num_Identite='achraf12'";
-            //command.CommandText = "update Citoyen set Vaccine='Non Vaccine' where Num_Identite='" + textBox1 + "'";
-
-            command.ExecuteNonQuery();
-            cnx.Close();
+           
             /*Persistance p = new Persistance();
             Citoyen c = new Citoyen();
             c.num_identite = "achraf12333";

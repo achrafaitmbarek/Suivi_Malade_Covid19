@@ -11,7 +11,7 @@ namespace Suivi_malade_corona
     {
         private string Num_Identite;
         private string Nom_Docteur;
-        private string Situation_Familiale;
+        private string Situation_Familiale="Celibataire";
         private bool Allergie = false;
         private DateTime Date_Prise_En_Charge;
         private bool Maladie_Chronique = false;

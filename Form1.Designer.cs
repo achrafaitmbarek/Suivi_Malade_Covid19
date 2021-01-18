@@ -35,26 +35,28 @@
             this.Consultation_Etat_button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Slide_Panel = new System.Windows.Forms.Panel();
-            this.Cahier_Medicale_button = new System.Windows.Forms.Button();
             this.Citoyen_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_Statistique = new System.Windows.Forms.Button();
             this.vacciner1 = new Suivi_malade_corona.Vacciner();
             this.diagnostique1 = new Suivi_malade_corona.Diagnostique();
             this.consulte_Etat1 = new Suivi_malade_corona.Consulte_Etat();
             this.cahier_Medicale_Citoyen1 = new Suivi_malade_corona.Cahier_Medicale_Citoyen();
             this.citoyenControl1 = new Suivi_malade_corona.CitoyenControl();
+            this.button_Enregistrer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.button_Enregistrer);
+            this.panel1.Controls.Add(this.button_Statistique);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button_Vaccin);
             this.panel1.Controls.Add(this.Consultation_Etat_button);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.Slide_Panel);
-            this.panel1.Controls.Add(this.Cahier_Medicale_button);
             this.panel1.Controls.Add(this.Citoyen_Button);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -80,7 +82,7 @@
             this.button_Vaccin.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Vaccin.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button_Vaccin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Vaccin.Location = new System.Drawing.Point(0, 296);
+            this.button_Vaccin.Location = new System.Drawing.Point(0, 211);
             this.button_Vaccin.Name = "button_Vaccin";
             this.button_Vaccin.Size = new System.Drawing.Size(249, 59);
             this.button_Vaccin.TabIndex = 5;
@@ -96,7 +98,7 @@
             this.Consultation_Etat_button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Consultation_Etat_button.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Consultation_Etat_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Consultation_Etat_button.Location = new System.Drawing.Point(0, 231);
+            this.Consultation_Etat_button.Location = new System.Drawing.Point(0, 146);
             this.Consultation_Etat_button.Name = "Consultation_Etat_button";
             this.Consultation_Etat_button.Size = new System.Drawing.Size(249, 59);
             this.Consultation_Etat_button.TabIndex = 4;
@@ -113,9 +115,9 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 521);
+            this.button4.Location = new System.Drawing.Point(0, 533);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 55);
+            this.button4.Size = new System.Drawing.Size(115, 43);
             this.button4.TabIndex = 3;
             this.button4.Text = "Quitter";
             this.button4.UseVisualStyleBackColor = false;
@@ -128,22 +130,6 @@
             this.Slide_Panel.Name = "Slide_Panel";
             this.Slide_Panel.Size = new System.Drawing.Size(10, 55);
             this.Slide_Panel.TabIndex = 2;
-            // 
-            // Cahier_Medicale_button
-            // 
-            this.Cahier_Medicale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Cahier_Medicale_button.FlatAppearance.BorderSize = 0;
-            this.Cahier_Medicale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cahier_Medicale_button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cahier_Medicale_button.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Cahier_Medicale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cahier_Medicale_button.Location = new System.Drawing.Point(3, 146);
-            this.Cahier_Medicale_button.Name = "Cahier_Medicale_button";
-            this.Cahier_Medicale_button.Size = new System.Drawing.Size(246, 53);
-            this.Cahier_Medicale_button.TabIndex = 1;
-            this.Cahier_Medicale_button.Text = "Cahier Medicale";
-            this.Cahier_Medicale_button.UseVisualStyleBackColor = false;
-            this.Cahier_Medicale_button.Click += new System.EventHandler(this.Cahier_Medicale_button_Click);
             // 
             // Citoyen_Button
             // 
@@ -169,6 +155,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(624, 10);
             this.panel2.TabIndex = 1;
+            // 
+            // button_Statistique
+            // 
+            this.button_Statistique.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_Statistique.FlatAppearance.BorderSize = 0;
+            this.button_Statistique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Statistique.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Statistique.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_Statistique.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Statistique.Location = new System.Drawing.Point(0, 276);
+            this.button_Statistique.Name = "button_Statistique";
+            this.button_Statistique.Size = new System.Drawing.Size(249, 59);
+            this.button_Statistique.TabIndex = 7;
+            this.button_Statistique.Text = "Statistique";
+            this.button_Statistique.UseVisualStyleBackColor = false;
             // 
             // vacciner1
             // 
@@ -211,6 +212,23 @@
             this.citoyenControl1.Size = new System.Drawing.Size(624, 508);
             this.citoyenControl1.TabIndex = 2;
             // 
+            // button_Enregistrer
+            // 
+            this.button_Enregistrer.BackColor = System.Drawing.Color.OliveDrab;
+            this.button_Enregistrer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_Enregistrer.FlatAppearance.BorderSize = 0;
+            this.button_Enregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Enregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Enregistrer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_Enregistrer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Enregistrer.Location = new System.Drawing.Point(134, 533);
+            this.button_Enregistrer.Name = "button_Enregistrer";
+            this.button_Enregistrer.Size = new System.Drawing.Size(115, 43);
+            this.button_Enregistrer.TabIndex = 8;
+            this.button_Enregistrer.Text = "Enregistrer";
+            this.button_Enregistrer.UseVisualStyleBackColor = false;
+            this.button_Enregistrer.Click += new System.EventHandler(this.button_Enregistrer_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,7 +257,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel Slide_Panel;
-        private System.Windows.Forms.Button Cahier_Medicale_button;
         private System.Windows.Forms.Button Citoyen_Button;
         private System.Windows.Forms.Button button4;
         private CitoyenControl citoyenControl1;
@@ -250,6 +267,8 @@
         private System.Windows.Forms.Button button_Vaccin;
         private Vacciner vacciner1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Statistique;
+        private System.Windows.Forms.Button button_Enregistrer;
     }
 }
 

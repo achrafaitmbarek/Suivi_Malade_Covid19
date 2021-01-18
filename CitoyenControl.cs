@@ -19,7 +19,8 @@ namespace Suivi_malade_corona
         
         private void Tester_Button_Click(object sender, EventArgs e)
         {
-            var cit = new Citoyen(textBox_Nom.Text);
+            var cit = new Citoyen();
+            cit.num_identite = textBox_Num_Identite.Text;
             cit.nom = textBox_Nom.Text;
             cit.prenom = textBox_Prenom.Text;
             if (textBox_Num_Telephone.Text!=string.Empty)
@@ -31,7 +32,7 @@ namespace Suivi_malade_corona
             {
                 cit.sexe = "Feminin";
             }
-            else if (checkBox_Masculin.Checked)
+            if (checkBox_Masculin.Checked)
             {
                 cit.sexe = "Masculin";
             }

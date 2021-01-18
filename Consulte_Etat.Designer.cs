@@ -226,7 +226,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Consulte_Etat";
-            this.Size = new System.Drawing.Size(637, 564);
+            this.Size = new System.Drawing.Size(495, 509);
             this.Load += new System.EventHandler(this.Consulte_Etat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.QrCode_Vaccin)).EndInit();
             this.ResumeLayout(false);
