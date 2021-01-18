@@ -30,24 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button_Vaccin = new System.Windows.Forms.Button();
             this.Consultation_Etat_button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Slide_Panel = new System.Windows.Forms.Panel();
             this.Cahier_Medicale_button = new System.Windows.Forms.Button();
             this.Citoyen_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.vacciner1 = new Suivi_malade_corona.Vacciner();
             this.diagnostique1 = new Suivi_malade_corona.Diagnostique();
             this.consulte_Etat1 = new Suivi_malade_corona.Consulte_Etat();
             this.cahier_Medicale_Citoyen1 = new Suivi_malade_corona.Cahier_Medicale_Citoyen();
             this.citoyenControl1 = new Suivi_malade_corona.CitoyenControl();
-            this.vacciner1 = new Suivi_malade_corona.Vacciner();
-            this.button_Vaccin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button_Vaccin);
             this.panel1.Controls.Add(this.Consultation_Etat_button);
             this.panel1.Controls.Add(this.button4);
@@ -59,6 +61,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 576);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(96, 371);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button_Vaccin
+            // 
+            this.button_Vaccin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_Vaccin.FlatAppearance.BorderSize = 0;
+            this.button_Vaccin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Vaccin.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Vaccin.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_Vaccin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Vaccin.Location = new System.Drawing.Point(0, 296);
+            this.button_Vaccin.Name = "button_Vaccin";
+            this.button_Vaccin.Size = new System.Drawing.Size(249, 59);
+            this.button_Vaccin.TabIndex = 5;
+            this.button_Vaccin.Text = "Vaccin";
+            this.button_Vaccin.UseVisualStyleBackColor = false;
+            this.button_Vaccin.Click += new System.EventHandler(this.button_Vaccin_Click);
             // 
             // Consultation_Etat_button
             // 
@@ -139,8 +167,16 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(249, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1010, 10);
+            this.panel2.Size = new System.Drawing.Size(624, 10);
             this.panel2.TabIndex = 1;
+            // 
+            // vacciner1
+            // 
+            this.vacciner1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.vacciner1.Location = new System.Drawing.Point(249, 68);
+            this.vacciner1.Name = "vacciner1";
+            this.vacciner1.Size = new System.Drawing.Size(435, 427);
+            this.vacciner1.TabIndex = 6;
             // 
             // diagnostique1
             // 
@@ -175,35 +211,11 @@
             this.citoyenControl1.Size = new System.Drawing.Size(624, 508);
             this.citoyenControl1.TabIndex = 2;
             // 
-            // vacciner1
-            // 
-            this.vacciner1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.vacciner1.Location = new System.Drawing.Point(249, 68);
-            this.vacciner1.Name = "vacciner1";
-            this.vacciner1.Size = new System.Drawing.Size(435, 427);
-            this.vacciner1.TabIndex = 6;
-            // 
-            // button_Vaccin
-            // 
-            this.button_Vaccin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_Vaccin.FlatAppearance.BorderSize = 0;
-            this.button_Vaccin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Vaccin.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Vaccin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button_Vaccin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Vaccin.Location = new System.Drawing.Point(0, 296);
-            this.button_Vaccin.Name = "button_Vaccin";
-            this.button_Vaccin.Size = new System.Drawing.Size(249, 59);
-            this.button_Vaccin.TabIndex = 5;
-            this.button_Vaccin.Text = "Vaccin";
-            this.button_Vaccin.UseVisualStyleBackColor = false;
-            this.button_Vaccin.Click += new System.EventHandler(this.button_Vaccin_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 576);
+            this.ClientSize = new System.Drawing.Size(873, 576);
             this.Controls.Add(this.vacciner1);
             this.Controls.Add(this.diagnostique1);
             this.Controls.Add(this.consulte_Etat1);
@@ -237,6 +249,7 @@
         private Diagnostique diagnostique1;
         private System.Windows.Forms.Button button_Vaccin;
         private Vacciner vacciner1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
