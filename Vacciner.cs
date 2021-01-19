@@ -35,9 +35,6 @@ namespace Suivi_malade_corona
 
         private void Vacciner_Load(object sender, EventArgs e)
         {}
-
-        
-
         private void textBox_Vacciner_TextChanged(object sender, EventArgs e)
         {
             if (textBox_Vacciner.Text != string.Empty)

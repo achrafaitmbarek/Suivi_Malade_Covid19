@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_Enregistrer = new System.Windows.Forms.Button();
-            this.button_Statistique = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button_Vaccin = new System.Windows.Forms.Button();
             this.Consultation_Etat_button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -40,12 +38,12 @@
             this.Citoyen_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.vacciner1 = new Suivi_malade_corona.Vacciner();
             this.diagnostique1 = new Suivi_malade_corona.Diagnostique();
             this.consulte_Etat1 = new Suivi_malade_corona.Consulte_Etat();
             this.cahier_Medicale_Citoyen1 = new Suivi_malade_corona.Cahier_Medicale_Citoyen();
             this.citoyenControl1 = new Suivi_malade_corona.CitoyenControl();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,8 +52,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.button_Enregistrer);
-            this.panel1.Controls.Add(this.button_Statistique);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button_Vaccin);
             this.panel1.Controls.Add(this.Consultation_Etat_button);
             this.panel1.Controls.Add(this.button4);
@@ -84,31 +80,6 @@
             this.button_Enregistrer.UseVisualStyleBackColor = false;
             this.button_Enregistrer.Click += new System.EventHandler(this.button_Enregistrer_Click);
             // 
-            // button_Statistique
-            // 
-            this.button_Statistique.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_Statistique.FlatAppearance.BorderSize = 0;
-            this.button_Statistique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Statistique.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Statistique.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button_Statistique.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Statistique.Location = new System.Drawing.Point(0, 276);
-            this.button_Statistique.Name = "button_Statistique";
-            this.button_Statistique.Size = new System.Drawing.Size(249, 59);
-            this.button_Statistique.TabIndex = 7;
-            this.button_Statistique.Text = "Statistique";
-            this.button_Statistique.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(96, 371);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button_Vaccin
             // 
             this.button_Vaccin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -117,7 +88,7 @@
             this.button_Vaccin.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Vaccin.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button_Vaccin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Vaccin.Location = new System.Drawing.Point(0, 211);
+            this.button_Vaccin.Location = new System.Drawing.Point(0, 275);
             this.button_Vaccin.Name = "button_Vaccin";
             this.button_Vaccin.Size = new System.Drawing.Size(249, 59);
             this.button_Vaccin.TabIndex = 5;
@@ -133,7 +104,7 @@
             this.Consultation_Etat_button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Consultation_Etat_button.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Consultation_Etat_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Consultation_Etat_button.Location = new System.Drawing.Point(0, 146);
+            this.Consultation_Etat_button.Location = new System.Drawing.Point(0, 185);
             this.Consultation_Etat_button.Name = "Consultation_Etat_button";
             this.Consultation_Etat_button.Size = new System.Drawing.Size(249, 59);
             this.Consultation_Etat_button.TabIndex = 4;
@@ -161,7 +132,7 @@
             // Slide_Panel
             // 
             this.Slide_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.Slide_Panel.Location = new System.Drawing.Point(0, 68);
+            this.Slide_Panel.Location = new System.Drawing.Point(0, 124);
             this.Slide_Panel.Name = "Slide_Panel";
             this.Slide_Panel.Size = new System.Drawing.Size(10, 55);
             this.Slide_Panel.TabIndex = 2;
@@ -174,7 +145,7 @@
             this.Citoyen_Button.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Citoyen_Button.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Citoyen_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Citoyen_Button.Location = new System.Drawing.Point(0, 68);
+            this.Citoyen_Button.Location = new System.Drawing.Point(3, 124);
             this.Citoyen_Button.Name = "Citoyen_Button";
             this.Citoyen_Button.Size = new System.Drawing.Size(249, 55);
             this.Citoyen_Button.TabIndex = 0;
@@ -202,12 +173,24 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(451, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 29);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "COVID19 APP";
+            // 
             // vacciner1
             // 
             this.vacciner1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.vacciner1.Location = new System.Drawing.Point(249, 68);
             this.vacciner1.Name = "vacciner1";
-            this.vacciner1.Size = new System.Drawing.Size(435, 427);
+            this.vacciner1.Size = new System.Drawing.Size(624, 508);
             this.vacciner1.TabIndex = 6;
             // 
             // diagnostique1
@@ -242,18 +225,6 @@
             this.citoyenControl1.Name = "citoyenControl1";
             this.citoyenControl1.Size = new System.Drawing.Size(624, 508);
             this.citoyenControl1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(451, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 29);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "COVID19 APP";
             // 
             // Form1
             // 
@@ -296,8 +267,6 @@
         private Diagnostique diagnostique1;
         private System.Windows.Forms.Button button_Vaccin;
         private Vacciner vacciner1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button_Statistique;
         private System.Windows.Forms.Button button_Enregistrer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;

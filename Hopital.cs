@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Suivi_malade_corona
 {
@@ -108,9 +109,20 @@ namespace Suivi_malade_corona
         public void Faire_Vacccin(string id)
         {
             cnx.Open();
-            command.CommandText = "update Citoyen set Vaccine='VACCINE' where Num_Identite='"+id+"'";
+            command.CommandText = "update Citoyen set Vaccine='VACCINE',Etat_Clr='VERT',Test_Result='GUERI',Etat='GUERI',Statut='NON-CONFINE' where Num_Identite='"+id+"'";
             command.Connection = cnx;
             command.ExecuteNonQuery();
+            command.CommandText = "SELECT * FROM Citoyen WHERE Num_Identite='" + id + "'";
+            command.Connection = cnx;
+            DataTable res = new DataTable();
+            adapter.Fill(res);
+            cnx.Close();
+            if (res.Rows.Count > 0)
+            {
+                DataRow row = res.Rows[0];
+                MessageBox.Show("Merci ! Le Citoyen " + row["Nom"] +" "+row["Prenom"]+ " Est bien Vaccine");
+            }
+                
             cnx.Close();
             
         }

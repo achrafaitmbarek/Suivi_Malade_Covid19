@@ -39,7 +39,7 @@
                 if (citoyen.test_result == "positif")
                 {
                     command.CommandText = "update Cas set Cas_Confirmes=Cas_Confirmes+1";
-                   command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
                 }
                 else
                 {
@@ -47,7 +47,7 @@
                     command.ExecuteNonQuery();
                 }
                 
-                MessageBox.Show("makyen ta probleme asahb");
+                MessageBox.Show("Y'a aucun Probleme!Le nouveau cas "+Citoyen.nom+" mrehba bik");
                 cnx.Close();
             }
         public string Etat;
@@ -69,7 +69,7 @@
                 this.Etat_Clr = row["Etat_Clr"].ToString();
                 this.Statut = row["Statut"].ToString();
                 this.Vaccine = row["Vaccine"].ToString();
-                return "Le Citoyen :" + row["Nom"] + "" + row["Prenom"] + " est en Etat " + row["Etat"] + " son test PCR est " + row["Test_Result"] + " est " + row["Vaccine"];
+                return "Le Citoyen : " + row["Nom"] + " " + row["Prenom"] + " est en Etat " + row["Etat"] + " son test PCR est " + row["Test_Result"] + " est " + row["Vaccine"];
             }
             return null;
         }
