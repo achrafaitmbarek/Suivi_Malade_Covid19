@@ -25,12 +25,13 @@ namespace Suivi_malade_corona
         {
             if (checkBox_Negatif.Checked)
             {
-                   checkBox_Positif.CheckState=CheckState.Unchecked;
+                    checkBox_Positif.CheckState=CheckState.Unchecked;
                     checkBox_Non_sature.Hide();
                     checkBox_Grave.Hide();
                     checkBox_Normale.Hide();
                     checkBox_Sature.Hide();
                     Diagnostique_Button.Hide();
+                    Form1.citoyen.test_result = "Negatif";
             }
         }
 
@@ -49,10 +50,11 @@ namespace Suivi_malade_corona
                 checkBox_Normale.Show();
                 checkBox_Sature.Show();
                 Diagnostique_Button.Show();
+                Form1.citoyen.test_result = "Positif";
             }
-            if (!checkBox_Positif.Checked)
+            if (checkBox_Positif.Checked)
             {
-                Diagnostique_Button.Hide();
+               // Diagnostique_Button.Hide();
             }
         }
 

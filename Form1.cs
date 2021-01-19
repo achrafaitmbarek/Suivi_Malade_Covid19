@@ -12,11 +12,10 @@ namespace Suivi_malade_corona
 {
     public partial class Form1 : Form
     {
-       
         private static Citoyen CITOYEN=new Citoyen();
         private static Hopital HOPITAL=new Hopital(CITOYEN);
         private static Cahier_Medicale Cahier_Medicale = new Cahier_Medicale();
-        private static Persistance PERSISTANCE = new Persistance(CITOYEN,Cahier_Medicale);
+        private static Persistance PERSISTANCE = new Persistance();
         public static Citoyen citoyen { get => CITOYEN; set => CITOYEN = value; }
         public static Hopital hopital { get => HOPITAL; set => HOPITAL = value; }
         public static Persistance persistance { get => PERSISTANCE; set => PERSISTANCE = value; }
@@ -52,18 +51,6 @@ namespace Suivi_malade_corona
             citoyenControl1.BringToFront();
             diagnostique1.Hide();
         }
-
-      /*  private void Cahier_Medicale_button_Click(object sender, EventArgs e)
-        {
-            Slide_Panel.Height = Cahier_Medicale_button.Height;
-            Slide_Panel.Top = Cahier_Medicale_button.Top;
-            citoyenControl1.Hide();
-            consulte_Etat1.Hide();
-            cahier_Medicale_Citoyen1.Show();
-            cahier_Medicale_Citoyen1.BringToFront();
-            diagnostique1.Hide();
-        }
-*/
         private void Consultation_Etat_button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Consultation_Etat_button.Height;
@@ -74,7 +61,6 @@ namespace Suivi_malade_corona
             consulte_Etat1.BringToFront();  
             diagnostique1.Hide();
         }
-
         private void button_Vaccin_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = button_Vaccin.Height;
@@ -89,13 +75,15 @@ namespace Suivi_malade_corona
 
         private void button1_Click(object sender, EventArgs e)
         {
-           //MessageBox.Show(""+citoyen.nom+" "+citoyen.prenom+" son NUM ID "+citoyen.num_identite+"tele"+citoyen.num_telephone+" sa date de naissance "+citoyen.date_naissance);
+           MessageBox.Show(""+citoyen.nom+" "+citoyen.prenom+" son NUM ID "+citoyen.num_identite+"tele"+citoyen.num_telephone+" sa date de naissance "+citoyen.date_naissance);
         }
 
         private void button_Enregistrer_Click(object sender, EventArgs e)
         {
-            persistance.AjoutCitoyen();
-            MessageBox.Show(citoyen.nom);
+            PERSISTANCE.Citoyen = CITOYEN;
+            PERSISTANCE.Cahier_Medicale = Cahier_Medicale;
+            PERSISTANCE.AjoutCitoyen();
+            MessageBox.Show(PERSISTANCE.Citoyen.nom) ;
         }
     }
 }
