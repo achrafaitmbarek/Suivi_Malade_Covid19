@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Suivi_malade_corona
 {
     public class Hopital
     {
+        static string cnx_chaine = "Data Source=DESKTOP-GC79O37;Initial Catalog=covid19management;Integrated Security=True";
+        static SqlConnection cnx = new SqlConnection(cnx_chaine);
+        static SqlCommand command = new SqlCommand();
+        static SqlDataAdapter adapter = new SqlDataAdapter(command);
         private Citoyen Citoyen;
         public Citoyen C { get => Citoyen; set => Citoyen = value; }
 
@@ -100,19 +105,14 @@ namespace Suivi_malade_corona
                 vaccin(C);
             }
         }
-        public void Faire_Vacccin(string vaccin_rep)
+        public void Faire_Vacccin(string id)
         {
-            //"vous avez vacciner ce citoyen ou vou voulez vacciner ce citoyen? (SVP reponds par oui ou non)"
-            if (vaccin_rep == "oui")
-            {
-                C.vaccine = "vaccine";
-                C.etat_clr = "vert";
-            }
-            else
-            {
-                C.vaccine = "non vaccine";
-                C.etat_clr = "orange";
-            }
+            cnx.Open();
+            command.CommandText = "update Citoyen set Vaccine='VACCINE' where Num_Identite='"+id+"'";
+            command.Connection = cnx;
+            command.ExecuteNonQuery();
+            cnx.Close();
+            
         }
         private void vaccin(Citoyen c)
         {

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Consulter_Button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Consult_Identite = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,8 +39,6 @@
             this.label_Etat_Couleur = new System.Windows.Forms.Label();
             this.label_Statut = new System.Windows.Forms.Label();
             this.label_Etat = new System.Windows.Forms.Label();
-            this.label_Confinement = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.QrCode_Vaccin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.QrCode_Vaccin)).BeginInit();
             this.SuspendLayout();
@@ -62,13 +60,13 @@
             this.Consulter_Button.UseVisualStyleBackColor = false;
             this.Consulter_Button.Click += new System.EventHandler(this.Consulter_Button_Click);
             // 
-            // textBox1
+            // textBox_Consult_Identite
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.Location = new System.Drawing.Point(132, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 34;
+            this.textBox_Consult_Identite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Consult_Identite.Location = new System.Drawing.Point(132, 79);
+            this.textBox_Consult_Identite.Name = "textBox_Consult_Identite";
+            this.textBox_Consult_Identite.Size = new System.Drawing.Size(132, 20);
+            this.textBox_Consult_Identite.TabIndex = 34;
             // 
             // label4
             // 
@@ -124,7 +122,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(26, 379);
+            this.label5.Location = new System.Drawing.Point(26, 338);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 43;
@@ -135,8 +133,8 @@
             this.label_Vaccine.AutoSize = true;
             this.label_Vaccine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label_Vaccine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Vaccine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_Vaccine.Location = new System.Drawing.Point(169, 379);
+            this.label_Vaccine.ForeColor = System.Drawing.Color.White;
+            this.label_Vaccine.Location = new System.Drawing.Point(169, 338);
             this.label_Vaccine.Name = "label_Vaccine";
             this.label_Vaccine.Size = new System.Drawing.Size(0, 15);
             this.label_Vaccine.TabIndex = 47;
@@ -146,7 +144,7 @@
             this.label_Etat_Couleur.AutoSize = true;
             this.label_Etat_Couleur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label_Etat_Couleur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Etat_Couleur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_Etat_Couleur.ForeColor = System.Drawing.Color.White;
             this.label_Etat_Couleur.Location = new System.Drawing.Point(169, 282);
             this.label_Etat_Couleur.Name = "label_Etat_Couleur";
             this.label_Etat_Couleur.Size = new System.Drawing.Size(0, 15);
@@ -157,7 +155,7 @@
             this.label_Statut.AutoSize = true;
             this.label_Statut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label_Statut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Statut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_Statut.ForeColor = System.Drawing.Color.White;
             this.label_Statut.Location = new System.Drawing.Point(169, 234);
             this.label_Statut.Name = "label_Statut";
             this.label_Statut.Size = new System.Drawing.Size(0, 15);
@@ -168,38 +166,15 @@
             this.label_Etat.AutoSize = true;
             this.label_Etat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label_Etat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Etat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_Etat.ForeColor = System.Drawing.Color.White;
             this.label_Etat.Location = new System.Drawing.Point(169, 187);
             this.label_Etat.Name = "label_Etat";
             this.label_Etat.Size = new System.Drawing.Size(0, 15);
             this.label_Etat.TabIndex = 44;
             // 
-            // label_Confinement
-            // 
-            this.label_Confinement.AutoSize = true;
-            this.label_Confinement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.label_Confinement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Confinement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_Confinement.Location = new System.Drawing.Point(169, 332);
-            this.label_Confinement.Name = "label_Confinement";
-            this.label_Confinement.Size = new System.Drawing.Size(0, 15);
-            this.label_Confinement.TabIndex = 49;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(26, 332);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 15);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "Confinement";
-            // 
             // QrCode_Vaccin
             // 
-            this.QrCode_Vaccin.Location = new System.Drawing.Point(132, 408);
+            this.QrCode_Vaccin.Location = new System.Drawing.Point(132, 367);
             this.QrCode_Vaccin.Name = "QrCode_Vaccin";
             this.QrCode_Vaccin.Size = new System.Drawing.Size(100, 82);
             this.QrCode_Vaccin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,15 +187,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.QrCode_Vaccin);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label_Confinement);
             this.Controls.Add(this.label_Vaccine);
             this.Controls.Add(this.label_Etat_Couleur);
             this.Controls.Add(this.label_Statut);
             this.Controls.Add(this.label_Etat);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Consulter_Button);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Consult_Identite);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -237,7 +210,7 @@
         #endregion
 
         private System.Windows.Forms.Button Consulter_Button;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Consult_Identite;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -247,8 +220,6 @@
         private System.Windows.Forms.Label label_Etat_Couleur;
         private System.Windows.Forms.Label label_Statut;
         private System.Windows.Forms.Label label_Etat;
-        private System.Windows.Forms.Label label_Confinement;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox QrCode_Vaccin;
     }
 }
