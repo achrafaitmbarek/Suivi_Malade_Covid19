@@ -40,7 +40,7 @@ namespace Suivi_malade_corona
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(9, 33);
+            this.label1.Location = new System.Drawing.Point(164, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 52;
@@ -55,7 +55,7 @@ namespace Suivi_malade_corona
             this.Vacciner_Btn.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Vacciner_Btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Vacciner_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Vacciner_Btn.Location = new System.Drawing.Point(115, 74);
+            this.Vacciner_Btn.Location = new System.Drawing.Point(210, 192);
             this.Vacciner_Btn.Name = "Vacciner_Btn";
             this.Vacciner_Btn.Size = new System.Drawing.Size(135, 31);
             this.Vacciner_Btn.TabIndex = 54;
@@ -65,7 +65,7 @@ namespace Suivi_malade_corona
             // 
             // textBox_Vacciner
             // 
-            this.textBox_Vacciner.Location = new System.Drawing.Point(150, 33);
+            this.textBox_Vacciner.Location = new System.Drawing.Point(305, 134);
             this.textBox_Vacciner.Name = "textBox_Vacciner";
             this.textBox_Vacciner.Size = new System.Drawing.Size(100, 20);
             this.textBox_Vacciner.TabIndex = 55;
@@ -80,7 +80,7 @@ namespace Suivi_malade_corona
             this.Controls.Add(this.Vacciner_Btn);
             this.Controls.Add(this.label1);
             this.Name = "Vacciner";
-            this.Size = new System.Drawing.Size(435, 427);
+            this.Size = new System.Drawing.Size(624, 508);
             this.Load += new System.EventHandler(this.Vacciner_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

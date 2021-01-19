@@ -16,6 +16,7 @@ namespace Suivi_malade_corona
         private static Hopital HOPITAL=new Hopital(CITOYEN);
         private static Cahier_Medicale Cahier_Medicale = new Cahier_Medicale();
         private static Persistance PERSISTANCE = new Persistance();
+        public static Vacciner vacciner = new Vacciner();
         public static Citoyen citoyen { get => CITOYEN; set => CITOYEN = value; }
         public static Hopital hopital { get => HOPITAL; set => HOPITAL = value; }
         public static Persistance persistance { get => PERSISTANCE; set => PERSISTANCE = value; }
@@ -72,18 +73,11 @@ namespace Suivi_malade_corona
             vacciner1.Show();
             vacciner1.BringToFront();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           MessageBox.Show(""+citoyen.nom+" "+citoyen.prenom+" son NUM ID "+citoyen.num_identite+"tele"+citoyen.num_telephone+" sa date de naissance "+citoyen.date_naissance);
-        }
-
         private void button_Enregistrer_Click(object sender, EventArgs e)
         {
             PERSISTANCE.Citoyen = CITOYEN;
             PERSISTANCE.Cahier_Medicale = Cahier_Medicale;
             PERSISTANCE.AjoutCitoyen();
-            MessageBox.Show(PERSISTANCE.Citoyen.nom) ;
         }
     }
 }

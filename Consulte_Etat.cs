@@ -21,6 +21,7 @@ namespace Suivi_malade_corona
 
         private void Consulter_Button_Click(object sender, EventArgs e)
         {
+            Form1.vacciner.Show();
             QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();
             var DataStr = Form1.persistance.ConsultationEtat(textBox_Consult_Identite.Text.ToString());
             label_Etat.Text = Form1.persistance.Etat.ToString();
@@ -37,6 +38,7 @@ namespace Suivi_malade_corona
                 label_Vaccine.BackColor = Color.Orange;
                if (MessageBox.Show(this, "Vous Voullez Vacciner Ce Citoyen", "ATTENTION !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
+                    
                 }
             }
             else
