@@ -120,7 +120,17 @@ namespace Suivi_malade_corona
             if (res.Rows.Count > 0)
             {
                 DataRow row = res.Rows[0];
-                MessageBox.Show("Merci ! Le Citoyen " + row["Nom"] +" "+row["Prenom"]+ " Est bien Vaccine");
+                
+                if (row["Vaccine"].ToString() == "VACCINE")
+                {
+                    MessageBox.Show("Le Citoyen " + row["Nom"] + " " + row["Prenom"] + " Est DEJA Vaccine");
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Merci ! Le Citoyen " + row["Nom"] +" "+row["Prenom"]+ " Est bien Vaccine");
+                }
+               
             }
                 
             cnx.Close();

@@ -40,6 +40,8 @@
             this.label_Statut = new System.Windows.Forms.Label();
             this.label_Etat = new System.Windows.Forms.Label();
             this.QrCode_Vaccin = new System.Windows.Forms.PictureBox();
+            this.label_Prise_En_Charge = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.QrCode_Vaccin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,18 +176,43 @@
             // 
             // QrCode_Vaccin
             // 
-            this.QrCode_Vaccin.Location = new System.Drawing.Point(132, 367);
+            this.QrCode_Vaccin.Location = new System.Drawing.Point(132, 410);
             this.QrCode_Vaccin.Name = "QrCode_Vaccin";
             this.QrCode_Vaccin.Size = new System.Drawing.Size(100, 82);
             this.QrCode_Vaccin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.QrCode_Vaccin.TabIndex = 51;
             this.QrCode_Vaccin.TabStop = false;
             // 
+            // label_Prise_En_Charge
+            // 
+            this.label_Prise_En_Charge.AutoSize = true;
+            this.label_Prise_En_Charge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.label_Prise_En_Charge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Prise_En_Charge.ForeColor = System.Drawing.Color.White;
+            this.label_Prise_En_Charge.Location = new System.Drawing.Point(232, 378);
+            this.label_Prise_En_Charge.Name = "label_Prise_En_Charge";
+            this.label_Prise_En_Charge.Size = new System.Drawing.Size(0, 15);
+            this.label_Prise_En_Charge.TabIndex = 53;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(3, 378);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 15);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Date Prise En Charge";
+            // 
             // Consulte_Etat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.label_Prise_En_Charge);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.QrCode_Vaccin);
             this.Controls.Add(this.label_Vaccine);
             this.Controls.Add(this.label_Etat_Couleur);
@@ -221,5 +248,7 @@
         private System.Windows.Forms.Label label_Statut;
         private System.Windows.Forms.Label label_Etat;
         private System.Windows.Forms.PictureBox QrCode_Vaccin;
+        private System.Windows.Forms.Label label_Prise_En_Charge;
+        private System.Windows.Forms.Label label7;
     }
 }
