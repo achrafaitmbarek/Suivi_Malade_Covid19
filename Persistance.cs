@@ -54,6 +54,7 @@
         public string Statut;
         public string Etat_Clr;
         public string Vaccine;
+        public string DP;
         public string ConsultationEtat(string id)
         {
             cnx.Open();
@@ -73,12 +74,21 @@
             }
             return null;
         }
-        public void Consulte_Cahier_Medicale()
+        public string Consulte_Cahier_Medicale(string id)
         {
             cnx.Open();
-            command.CommandText = "select * from Cahier_Medicale where Num_Identite='" + citoyen.num_identite + "'";
-            command.ExecuteNonQuery();
+            command.CommandText = "select * from Cahier_Medicale where Num_Identite='" + id + "'";
+            command.Connection = cnx;
+            DataTable res = new DataTable();
+            adapter.Fill(res);
             cnx.Close();
+            if (res.Rows.Count > 0)
+            {
+                DataRow row = res.Rows[0];
+                this.DP = row["Date_Prise_En_Charge"].ToString();
+                return "" + row["Date_Prise_En_Charge"];
+            }
+            return null;
         }
         }
     }

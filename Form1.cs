@@ -41,7 +41,6 @@ namespace Suivi_malade_corona
             }
             
         }
-
         private void Citoyen_Button_Click(object sender, EventArgs e)
         {
             Slide_Panel.Height = Citoyen_Button.Height;

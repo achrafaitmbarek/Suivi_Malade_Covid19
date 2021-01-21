@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace Suivi_malade_corona
 {
@@ -31,6 +30,7 @@ namespace Suivi_malade_corona
         {
             Hopital h = new Hopital();
             h.Faire_Vacccin(textBox_Vacciner.Text.ToString());
+            textBox_Vacciner.Text = string.Empty;
         }
 
         private void Vacciner_Load(object sender, EventArgs e)

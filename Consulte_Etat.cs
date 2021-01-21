@@ -27,28 +27,29 @@ namespace Suivi_malade_corona
             label_Etat.Text = Form1.persistance.Etat.ToString();
             label_Etat_Couleur.Text = Form1.persistance.Etat_Clr.ToString();
             label_Statut.Text = Form1.persistance.Statut.ToString();
+            label_Prise_En_Charge.Text= Form1.persistance.Consulte_Cahier_Medicale(textBox_Consult_Identite.Text.ToString());
             if (Form1.persistance.Vaccine.ToString()=="VACCINE")
             {
                 label_Vaccine.Text = Form1.persistance.Vaccine.ToString();
                 label_Vaccine.BackColor = Color.Green;
+                label_Prise_En_Charge.Text = Form1.persistance.DP;
             }
             else if (Form1.persistance.Vaccine.ToString() == "NON-VACCINE")
             {
                 label_Vaccine.Text = Form1.persistance.Vaccine.ToString();
                 label_Vaccine.BackColor = Color.Orange;
-               if (MessageBox.Show(this, "Vous Voullez Vacciner Ce Citoyen", "ATTENTION !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                {
-                    
-                }
+                MessageBox.Show("Ce Citoyen est infecte et NON-Vaccine vous pouvez vous derigez vers la zone 'Vaccin' en entrant son Numero d'identite ou le vacciner ");
+                label_Prise_En_Charge.Text = Form1.persistance.DP;
             }
             else
             {
                 label_Vaccine.Text = Form1.persistance.Vaccine.ToString();
                 label_Vaccine.BackColor = Color.Red;
+                label_Prise_En_Charge.Text = Form1.persistance.DP;
             }
             if (DataStr == null)
             {
-                MessageBox.Show("une personne avec'" + textBox_Consult_Identite.Text + "'n'exsite pas");
+                MessageBox.Show("Une personne avec'" + textBox_Consult_Identite.Text + "'n'exsite pas");
                 return;
             }
             var Data = QR.CreateQrCode(DataStr, QRCoder.QRCodeGenerator.ECCLevel.H);
