@@ -1,23 +1,6 @@
 # Suivi_Malade_Covid19 (C#) - Readme
 
 
-# Eloken Multistep Form Project
-
-[![Status](https://img.shields.io/badge/Status-In%20Progress-blueviolet)]()
-[![License](https://img.shields.io/badge/License-MIT-green)]()
-
-Welcome to the repository of my Multistep Form project. This project is a testament to my passion for crafting seamless and engaging user experiences. Inspired by the given Eloken Design, the project is built using Next.js, Tailwind CSS, and various technologies, showcasing my commitment to creating dynamic and user-friendly web applications.
-
-## Table of Contents
-- [About the Project](#about-the-project)
-- [Key Features](#key-features)
-- [Technologies Used](#technologies-used)
-- [How to Deploy Locally](#how-to-deploy-locally)
-- [Screenshots](#screenshots)
-- [Live Demo](#live-demo)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Description
 Suivi_Malade_Covid19 is a C# application designed to empower health authorities in monitoring and controlling the spread of the Covid-19 pandemic. The application utilizes SQL SERVER as its data source, offering a robust platform for storing and managing critical information related to Covid-19 cases.
 
